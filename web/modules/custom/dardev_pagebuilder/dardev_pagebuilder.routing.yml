@@ -1,0 +1,97 @@
+dardev_pagebuilder.admin:
+  path: '/admin/structure/dardev-pagebuilder'
+  defaults:
+    _title: 'Blocks - Dardev Page Builder'
+    _controller: '\Drupal\dardev_pagebuilder\Controller\DardevPageBuilderController::dardev_pagebuilder_list'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.add:
+  path: '/admin/structure/dardev-pagebuilder/form/{bid}'
+  defaults:
+    _title: 'Add Dardev Content Builder'
+    _form: '\Drupal\dardev_pagebuilder\Form\AddForm'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.import:
+  path: '/admin/structure/dardev-pagebuilder/import/{bid}'
+  defaults:
+    _title: 'Import Dardev Content Builder'
+    _form: '\Drupal\dardev_pagebuilder\Form\ImportForm'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.edit:
+  path: '/admin/structure/dardev-pagebuilder/edit/{bid}'
+  defaults:
+    _title: 'Edit Dardev Content Builder'
+    _controller: '\Drupal\dardev_pagebuilder\Controller\DardevPageBuilderController::dardev_pagebuilder_edit'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.delete:
+  path: '/admin/structure/dardev-pagebuilder/delete/{bid}'
+  defaults:
+    _title: 'Delete Dardev Content Builder'
+    _form: '\Drupal\dardev_pagebuilder\Form\DelForm'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.save:
+  path: '/admin/structure/dardev-pagebuilder/save'
+  defaults:
+    _title: 'Save Configuration of Dardev Page Builder'
+    _controller: '\Drupal\dardev_pagebuilder\Controller\DardevPageBuilderController::dardev_pagebuilder_save'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.export:
+  path: '/admin/structure/dardev-pagebuilder/export/{bid}'
+  defaults:
+    _title: 'Save configuration of Dardev Page Builder'
+    _controller: '\Drupal\dardev_pagebuilder\Controller\DardevPageBuilderController::dardev_pagebuilder_export'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.clone:
+  path: '/admin/structure/dardev-pagebuilder/clone/{bid}'
+  defaults:
+    _title: 'Clone Dardev Content Builder'
+    _form: '\Drupal\dardev_pagebuilder\Form\CloneForm'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.save_node:
+  path: '/admin/structure/dardev-pagebuilder/save_node'
+  defaults:
+    _title: 'Save Configuration of Dardev Page Builder'
+    _controller: '\Drupal\dardev_pagebuilder\Controller\DardevPageBuilderController::dardev_pagebuilder_save_node'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.import_node:
+  path: '/admin/structure/dardev-content-builder/import_node/{nid}'
+  defaults:
+    _title: 'Import Dardev Content Builder'
+    _form: '\Drupal\dardev_pagebuilder\Form\ImportNode'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.admin.export_node:
+  path: '/admin/structure/dardev-content-builder/export_node/{nid}'
+  defaults:
+    _title: 'Save configuration of Dardev Page Builder'
+    _controller: '\Drupal\dardev_pagebuilder\Controller\DardevPageBuilderController::dardev_pagebuilder_export_node'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+
+dardev_pagebuilder.settings_form:
+  path: '/admin/config/dardev_pagebuilder/settings'
+  defaults:
+    _form: '\Drupal\dardev_pagebuilder\Form\SettingsForm'
+    _title: 'Page Builder Settings'
+  requirements:
+    _permission: 'administer dardev_pagebuilder'
+  options:
+    _admin_route: TRUE

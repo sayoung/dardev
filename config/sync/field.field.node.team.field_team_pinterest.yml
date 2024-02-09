@@ -1,0 +1,21 @@
+uuid: 073e0103-6ea8-4af0-b4e3-e099be779b23
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_pinterest
+    - node.type.team
+_core:
+  default_config_hash: uJTa42XyZr7fdRKBpAhY_zrWHcc6ABdAUD_m2bFJNVc
+id: node.team.field_team_pinterest
+field_name: field_team_pinterest
+entity_type: node
+bundle: team
+label: 'Team Pinterest'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

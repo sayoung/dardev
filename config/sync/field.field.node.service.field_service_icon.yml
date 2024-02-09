@@ -1,0 +1,40 @@
+uuid: 4e01bd75-fcec-4f1c-b5c5-f0ca6383d9f6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_icon
+    - node.type.service
+  module:
+    - image
+_core:
+  default_config_hash: pZ1-bn8OLBIMXizMuRFZQpopyrX2oi4de_5vN5Bu-88
+id: node.service.field_service_icon
+field_name: field_service_icon
+entity_type: node
+bundle: service
+label: 'Service Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: services-icons
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

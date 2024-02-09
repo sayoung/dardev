@@ -1,0 +1,54 @@
+<?php
+
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Form\FormStateInterface;
+
+define( 'dardev_sliderlayer_VERSION', '1.0' );
+define( 'GAV_SLIDERLAYER_PATH', \Drupal::service('extension.list.module')->getPath('dardev_sliderlayer'));
+  module_load_include('php','dardev_sliderlayer', '/includes/functions');
+  module_load_include('php', 'dardev_sliderlayer', '/includes/model');
+  module_load_include('php', 'dardev_sliderlayer', '/includes/utilities');
+  module_load_include('php', 'dardev_sliderlayer', '/includes/frontend');
+
+function dardev_sliderlayer_theme($existing, $type, $theme, $path) {
+  $items['admin-form'] = array(
+    'variables' => array(
+      'content' => '',
+    ),
+    'path' => $path . '/templates/backend',
+  );
+
+  $items['admin-global'] = array(
+     'variables' => array(
+      'content' => '',
+    ),
+     'path' => $path . '/templates/backend',
+  );
+
+  $items['block-slider'] = array(
+     'variables' => array(
+      'content' => '',
+    ),
+     'path' => $path . '/templates/frontend',
+  );
+  return $items;
+}
+
+function dardev_sliderlayer_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'dardev_sliderlayer/dardev_sliderlayer.assets.frontend';
+}
+
+function dardev_sliderlayer_styles(){
+  $variables = array(
+    'data' => array()
+  );
+  Drupal::moduleHandler()->alter('sliderlayer_styles', $variables);
+
+  return $variables['data'];
+}
+
+function dardev_sliderlayer_update_projects_alter(&$projects){
+   unset($projects['dardev_sliderlayer']);
+}
+

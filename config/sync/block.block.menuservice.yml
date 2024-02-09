@@ -1,0 +1,39 @@
+uuid: fb03974f-37d7-4c41-b582-97dcf5c7a4bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-service
+  module:
+    - dardevthemer
+    - node
+    - system
+  theme:
+    - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
+_core:
+  default_config_hash: Sv3S0iyWjM9MEFY4VMb0vaMJ6ecBoz7brNKEv2u8bBU
+id: menuservice
+theme: drdv_subtheme
+region: sidebar_right
+weight: -15
+provider: null
+plugin: 'system_menu_block:menu-service'
+settings:
+  id: 'system_menu_block:menu-service'
+  label: 'All Services'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      service: service

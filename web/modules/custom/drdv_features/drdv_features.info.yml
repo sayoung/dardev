@@ -1,0 +1,34 @@
+name: 'Drdv Features'
+description: 'Drdv Features - Import content type, field, view ... for Drdv theme.'
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - block
+  - block_content
+  - comment
+  - contact
+  - ctools
+  - datetime
+  - field
+  - file
+  - dardev_view
+  - dardevthemer
+  - image
+  - imce
+  - mailchimp_signup
+  - menu_ui
+  - node
+  - options
+  - path
+  - pathauto
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_infinite_scroll
+  - webform
+  - config_update
+  - features
+  - admin_toolbar
+version: 9.x

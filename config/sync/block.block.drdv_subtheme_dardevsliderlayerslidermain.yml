@@ -1,0 +1,24 @@
+uuid: e4257110-2e19-438a-8112-cc12130b86ce
+langcode: fr
+status: true
+dependencies:
+  module:
+    - dardev_sliderlayer
+    - dardevthemer
+  theme:
+    - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
+id: drdv_subtheme_dardevsliderlayerslidermain
+theme: drdv_subtheme
+region: slideshow_content
+weight: 0
+provider: null
+plugin: 'dardev_sliderlayer_block:dardev_sliderlayer_block____1'
+settings:
+  id: 'dardev_sliderlayer_block:dardev_sliderlayer_block____1'
+  label: 'Dardev SliderLayer - Slider Main'
+  label_display: '0'
+  provider: dardev_sliderlayer
+visibility: {  }

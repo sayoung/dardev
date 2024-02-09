@@ -1,0 +1,45 @@
+timeline:
+  css:
+    theme:
+      css/timeline.css: {}
+  js:
+    js/scrollreveal.min.js: {}
+    js/timeline.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+human_resources:
+  css:
+    theme:
+      css/timeline.css: {}
+  js:
+    js/highcharts.js: {}
+    js/customChart.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+states:
+  css:
+    theme:
+      css/states.css: {}
+  js:
+    js/states.js: {}
+
+libs:
+  header: true
+  js:
+    https://code.highcharts.com/highcharts.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/sankey.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/organization.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/exporting.js: { type: external, minified: true }
+    https://code.highcharts.com/modules/accessibility.js: { type: external, minified: true }
+
+
+organigramme:
+  js:
+    js/orgChart.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -1,0 +1,62 @@
+dardev_newsletter.admin:
+  path: '/admin/inra'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'INRA'
+  requirements:
+    _permission: 'TRUE'
+
+dardev_newsletter.list:
+  path: '/admin/inra/newsletter'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Newsletter'
+  requirements:
+    _permission: 'TRUE'
+
+
+dardev_newsletter.dardev_newsletter_controller_display:
+  path: '/admin/inra/dardev_newsletter'
+  defaults:
+    _controller: '\Drupal\dardev_newsletter\Controller\NewsletterController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+
+
+dardev_newsletter.display_table_controller_display:
+  path: '/admin/inra/dardev_newsletter/list'
+  defaults:
+    _controller: '\Drupal\dardev_newsletter\Controller\DisplayTableController::display'
+    _title: 'Display Newsletter Subscriptions'
+  requirements:
+    _permission: 'access content'
+
+
+dardev_newsletter.delete_form:
+  path: '/admin/config/dardev_newsletter/delete/{cid}'
+  defaults:
+    _form: '\Drupal\dardev_newsletter\Form\DeleteForm'
+    _title: 'Delete Email'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+newsletter.admin_synchroniser:
+  path: '/admin/inra/inra/newsletter'
+  defaults:
+    _form: '\Drupal\dardev_newsletter\Form\NewsletterConfigForm'
+    _title: 'Newsletter'
+  requirements:
+    _permission: 'administer site configuration'
+
+modal_form_send.open_modal_form:
+  path: '/admin/inra/modal_form_send'
+  defaults:
+    _title: 'Send Newsletter'
+    _controller: '\Drupal\dardev_newsletter\Newsletter\Newsletter::openModalForm'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,22 @@
+uuid: fc984418-4d22-45b5-850b-40cd7417e0a7
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - dardev_theme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: dardev_theme_primary_local_tasks
+theme: dardev_theme
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets principaux'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: c66a7801-fbc3-4c22-8e1b-660c31059233
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+id: time_zones
+label: 'Fuseaux horaires'
+category: 'Date et heure'
+likert: false
+options: ''

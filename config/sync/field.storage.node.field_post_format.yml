@@ -1,0 +1,35 @@
+uuid: cd2dec51-07fc-4b85-8223-9b63810c5274
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: BylvwlFKGs-Mwt4E6ppyhPJiT0DceVKl0BOfb-MXSlU
+id: node.field_post_format
+field_name: field_post_format
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: standard
+      label: 'Standard (Image)'
+    -
+      value: gallery
+      label: Gallery
+    -
+      value: video
+      label: Vidéo
+    -
+      value: audio
+      label: Audio
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

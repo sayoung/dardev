@@ -1,0 +1,165 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap: { type: external }
+      //fonts.googleapis.com/css2?family=Hind:wght@400;600;700&display=swap: { type: external }
+      //fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap: { type: external }
+      css/bootstrap.min.css: {}
+      css/style.css: {}
+      css/heading.css: {}
+      css/style-responsive.css: {}
+      css/vertical-rhythm.min.css: {}
+      css/magnific-popup.css: {}
+      css/owl.carousel.css: {}
+      css/splitting.css: {}
+      css/YTPlayer.css: {}
+      css/demo-bold/demo-bold.css: {}
+
+  js:
+    
+    js/bootstrap.bundle.min.js: { type: 'file' }
+    js/plugins.js: { type: 'file' }
+    js/all.js: { type: 'file' }
+
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+
+dardev_theme.skin.default:
+  version: VERSION
+  css:
+    theme: 
+      css/new-bootstrap.css: {}
+      css/new-template.css: {}
+
+dardev_theme.skin.blue:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/blue/bootstrap.css: {}
+      css/skins/blue/template.css: {}
+
+dardev_theme.skin.brown:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/brown/bootstrap.css: {}
+      css/skins/brown/template.css: {}
+
+dardev_theme.skin.green:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/green/bootstrap.css: {}
+      css/skins/green/template.css: {}
+
+dardev_theme.skin.lilac:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/lilac/bootstrap.css: {}
+      css/skins/lilac/template.css: {}
+
+dardev_theme.skin.lime_green:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/lime_green/bootstrap.css: {}
+      css/skins/lime_green/template.css: {}
+
+dardev_theme.skin.orange:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/orange/bootstrap.css: {}
+      css/skins/orange/template.css: {}
+
+dardev_theme.skin.pink:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/pink/bootstrap.css: {}
+      css/skins/pink/template.css: {}
+
+dardev_theme.skin.purple:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/purple/bootstrap.css: {}
+      css/skins/purple/template.css: {}
+
+dardev_theme.skin.red:
+  version: VERSION
+  css:
+    theme:  
+      css/skins/red/bootstrap.css: {}
+      css/skins/red/template.css: {}
+
+dardev_theme.skin.turquoise:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/turquoise/bootstrap.css: {}
+      css/skins/turquoise/template.css: {}
+
+dardev_theme.skin.turquoise2:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/turquoise2/bootstrap.css: {}
+      css/skins/turquoise2/template.css: {}
+
+dardev_theme.skin.violet_red:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/violet_red/bootstrap.css: {}
+      css/skins/violet_red/template.css: {}
+
+dardev_theme.skin.violet_red2:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/violet_red2/bootstrap.css: {}
+      css/skins/violet_red2/template.css: {}
+
+dardev_theme.skin.yellow:
+  version: VERSION
+  css:
+    theme: 
+      css/skins/yellow/bootstrap.css: {}
+      css/skins/yellow/template.css: {}
+
+
+dardev-theme-admin:
+  version: VERSION
+  css: 
+    theme: 
+      css/theme-settings.css: {}
+      vendor/colorpicker/css/colorpicker.css: {}
+      vendor/codemirror/lib/codemirror.css: {}
+      vendor/codemirror/addon/hint/show-hint.css: {}
+  js:
+      vendor/jquery-migrate.min.js: {}
+      vendor/colorpicker/js/colorpicker.js: {}
+      vendor/codemirror/lib/codemirror.js: {cope: footer}
+      vendor/codemirror/mode/css/css.js: {cope: footer}
+      js/customize.js: {}
+
+maintenance_page:
+  version: VERSION
+  css:
+    theme:
+      css/maintenance-page.css: {}
+
+views-infinite-scroll:
+  version: VERSION
+  js:
+    js/override/infinite-scroll.js : {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.debounce

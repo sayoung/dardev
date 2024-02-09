@@ -1,0 +1,26 @@
+uuid: 4fcd4b91-0538-4a35-bbc4-05d868ee76d3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.testimonial
+  module:
+    - text
+_core:
+  default_config_hash: 0stbuijHqJcwyWrcd_x6YngleZSV6ovRPpENQ0SCBqc
+id: node.testimonial.body
+field_name: body
+entity_type: node
+bundle: testimonial
+label: Corps
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

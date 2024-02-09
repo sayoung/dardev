@@ -1,0 +1,30 @@
+uuid: ec6a019f-2cd4-4471-ae53-31c49348ccdb
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: M4PwUiJlqCXjTloDEO3mdpv11GQ8BbHuEl4KXv5L3AE
+id: content
+label: Contenu
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  e34fccb0-f935-441c-8894-a567a99859e8:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e34fccb0-f935-441c-8894-a567a99859e8
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      banner: banner
+      page: page
+      page_full: page_full
+      portfolio: portfolio
+      team: team
+      testimonial: testimonial
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,27 @@
+uuid: 0e175dbd-6cf9-4e1a-9037-b32f6d08a764
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_4
+    - field.field.node.actualite.body
+    - field.field.node.actualite.field_service_icon
+    - field.field.node.actualite.field_service_images
+    - node.type.actualite
+  module:
+    - user
+id: node.actualite.teaser_4
+targetEntityType: node
+bundle: actualite
+mode: teaser_4
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_service_icon: true
+  field_service_images: true
+  langcode: true

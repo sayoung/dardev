@@ -1,0 +1,7 @@
+administer dardev_customize:
+  title: 'Administer Dardev Customize'
+  description: 'Administer Dardev Customize.'
+
+administer dardev_customize preview:
+   title: 'Administer Dardev Customize Preview'
+   description: 'Administer Dardev Customize Preview.'

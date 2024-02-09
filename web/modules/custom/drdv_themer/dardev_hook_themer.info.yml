@@ -1,0 +1,7 @@
+type: module
+name : Dardev Drdv Themer
+description : Dardev Drdv Themer
+package: dardev
+version: '9.x'
+core_version_requirement: ^8.8 || ^9 || ^10
+project: 'dardev_hook_themer'

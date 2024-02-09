@@ -1,0 +1,21 @@
+dardev_newsletter.admin:
+  title: 'Newsletter'
+  route_name: 'dardev_newsletter.admin'
+  parent: 'system.admin'
+  description: 'Administer and configure your portail.'
+  weight: -9
+
+dardev_newsletter.list:
+  title: 'Newsletter'
+  route_name: 'dardev_newsletter.list'
+  parent: 'dardev_newsletter.admin'
+  description: 'Administer and configure your portail.'
+  weight: -10
+
+dardev_newsletter.display_table_controller_display:
+  title: 'Liste des emails'
+  route_name: 'dardev_newsletter.display_table_controller_display'
+  parent: 'dardev_newsletter.list'
+  description: 'Administer and configure your portail.'
+  weight: -10
+  

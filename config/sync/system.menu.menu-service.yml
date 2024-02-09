@@ -1,0 +1,10 @@
+uuid: 8f84ac5b-eeff-4f2a-be93-d07826d21abc
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1mkbOzv-xVLS5qctaJ7KX7G7qlgpYp2RmD1oMvyZUWw
+id: menu-service
+label: 'Menu Service'
+description: ''
+locked: false

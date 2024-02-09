@@ -1,0 +1,17 @@
+uuid: 8ee82511-4e68-41d4-8e5e-cc6db9c6a97e
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Dz2I9aODuaTlhYorPb87L-lSmo150amJW9b_sdzqweM
+name: small
+label: 'Small (440×295)'
+effects:
+  7939f4ad-5984-4241-8447-48d3389b9b6d:
+    uuid: 7939f4ad-5984-4241-8447-48d3389b9b6d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 440
+      height: 295
+      anchor: center-center

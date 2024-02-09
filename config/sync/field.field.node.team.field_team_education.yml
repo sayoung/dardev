@@ -1,0 +1,21 @@
+uuid: 691b234d-d9f9-4956-8ddc-49a72fd9439a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_education
+    - node.type.team
+_core:
+  default_config_hash: 2r_2tEyXu1NlaopYYv1yTvVhhPVWjawLIPGcf26EPVc
+id: node.team.field_team_education
+field_name: field_team_education
+entity_type: node
+bundle: team
+label: 'Team Education'
+description: 'Sample: MBA, Rotterdam School of Management, Erasmus University'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

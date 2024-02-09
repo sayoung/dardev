@@ -1,0 +1,26 @@
+uuid: 136f27af-5f6d-4527-ac0a-d964f2392d36
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.gallery
+  module:
+    - text
+_core:
+  default_config_hash: ksf32FFMEWACrRl9hqZfVqbBVe7VrcqrQHc00ndx2U4
+id: node.gallery.body
+field_name: body
+entity_type: node
+bundle: gallery
+label: Corps
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

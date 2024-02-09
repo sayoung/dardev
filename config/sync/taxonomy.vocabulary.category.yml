@@ -1,0 +1,10 @@
+uuid: 105afa85-3be7-44c6-b9e1-997368b4a2b9
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HbbgKoheUG3agw6rId0xIKziHs1s37yimJiIaJ_HSLc
+name: Catégorie
+vid: category
+description: 'Category for article'
+weight: 0

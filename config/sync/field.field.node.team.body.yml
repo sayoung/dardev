@@ -1,0 +1,26 @@
+uuid: e74e0415-812c-410a-a155-1d89cc184929
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.team
+  module:
+    - text
+_core:
+  default_config_hash: lWvmQ_3Nmlj-Sqra990W_-a8QUp0zdR5XMT6SSLTbN4
+id: node.team.body
+field_name: body
+entity_type: node
+bundle: team
+label: Corps
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

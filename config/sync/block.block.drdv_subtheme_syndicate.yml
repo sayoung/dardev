@@ -1,0 +1,23 @@
+uuid: 0284502a-5bf3-4edd-ae66-7c14de8a2d3e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - drdv_subtheme
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: drdv_subtheme_syndicate
+theme: drdv_subtheme
+region: offcanvas
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'Flux RSS'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

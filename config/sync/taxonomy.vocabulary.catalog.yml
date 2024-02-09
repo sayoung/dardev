@@ -1,0 +1,10 @@
+uuid: 7aee30fe-ddb6-44b8-83b4-e673b1ec3b58
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FgRAtTeoOLgKPC8IqwM7RWuqvUKaLX44N0iBb9HC3_g
+name: Catalog
+vid: catalog
+description: 'Product catalog'
+weight: -10

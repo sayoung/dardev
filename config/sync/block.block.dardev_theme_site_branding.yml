@@ -1,0 +1,25 @@
+uuid: 2d3189d6-3e19-436a-8b1c-73f9a53a971f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dardev_theme
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: dardev_theme_site_branding
+theme: dardev_theme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Identité du site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

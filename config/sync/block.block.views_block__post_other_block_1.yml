@@ -1,0 +1,35 @@
+uuid: 458f06b5-deb2-440e-8b15-5cfcdaa3c1ab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - dardevthemer
+    - system
+    - views
+  theme:
+    - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
+_core:
+  default_config_hash: darbTdQw9mJKGON_Ki-ASJtJ3aqHqsg_ACf856nJiNM
+id: views_block__post_other_block_1
+theme: drdv_subtheme
+region: sidebar_right
+weight: -12
+provider: null
+plugin: 'views_block:post_other-block_1'
+settings:
+  id: 'views_block:post_other-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/services\r\n/services-2\r\n/services-3\r\n/blogs-masonry\r\n/blogs-grid\r\n/portfolio\r\n/portfolio-1\r\n/portfolio-2\r\n/portfolio-3\r\n/portfolio-4"

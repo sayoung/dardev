@@ -1,0 +1,22 @@
+uuid: 0218efd6-576b-4436-86a3-c128ed040af5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drdv_subtheme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: drdv_subtheme_powered
+theme: drdv_subtheme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

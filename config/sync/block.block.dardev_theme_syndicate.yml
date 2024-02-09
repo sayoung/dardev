@@ -1,0 +1,23 @@
+uuid: 15dc41b6-ca87-49e8-9a7e-b89a6f3d6220
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - dardev_theme
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: dardev_theme_syndicate
+theme: dardev_theme
+region: offcanvas
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'Flux RSS'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

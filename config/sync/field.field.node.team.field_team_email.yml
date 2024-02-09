@@ -1,0 +1,21 @@
+uuid: 34f5e5e0-1abf-4ebe-a1c9-b34fd8d43b16
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_email
+    - node.type.team
+_core:
+  default_config_hash: ZJw1Vvkk6Yx328v1xarRPwLhc4WcAupeBN5MlKyJ-aM
+id: node.team.field_team_email
+field_name: field_team_email
+entity_type: node
+bundle: team
+label: 'Team Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

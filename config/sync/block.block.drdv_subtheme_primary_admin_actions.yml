@@ -1,0 +1,20 @@
+uuid: bf260d68-3ec3-4ac7-bbff-89ea83b81b93
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - drdv_subtheme
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: drdv_subtheme_primary_admin_actions
+theme: drdv_subtheme
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Actions d'administration principales"
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: 01f1242f-b589-41dc-a723-73513eea89ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - dardevthemer
+    - views
+  theme:
+    - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
+_core:
+  default_config_hash: 8RZLtL8gew0a_sz560oRwpoTrMDVWxRdUrV_axYPAoQ
+id: views_block__post_other_block_8
+theme: drdv_subtheme
+region: quick_side
+weight: -5
+provider: null
+plugin: 'views_block:post_other-block_8'
+settings:
+  id: 'views_block:post_other-block_8'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

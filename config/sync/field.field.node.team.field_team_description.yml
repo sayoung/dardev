@@ -1,0 +1,24 @@
+uuid: 231db745-10dc-4c21-aca4-a4f0f93a2f26
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_description
+    - node.type.team
+  module:
+    - text
+_core:
+  default_config_hash: CKrzzbj8e9eI65OEvl8jzxb9BkD_W-jM86K7ZA4kIx8
+id: node.team.field_team_description
+field_name: field_team_description
+entity_type: node
+bundle: team
+label: 'Team description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

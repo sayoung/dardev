@@ -1,0 +1,22 @@
+uuid: 22e12147-cb74-41c9-9464-7745c09ed51d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dardev_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: dardev_theme_content
+theme: dardev_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,17 @@
+uuid: 371aa8d8-8fcc-4565-ad83-fd20c1cac2c0
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fPviikQN_qguomXJ_7_nkUdG1KKZ9jJK7wAAk81nnVc
+name: normal_size
+label: 'Normal (500 x 420)'
+effects:
+  356b0231-c7fd-49a3-ab03-3f6c6e2642d0:
+    uuid: 356b0231-c7fd-49a3-ab03-3f6c6e2642d0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 420
+      anchor: center-center

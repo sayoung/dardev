@@ -1,0 +1,26 @@
+uuid: 540f05e3-8f70-44b0-a128-0bb5062a5e04
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.service
+  module:
+    - text
+_core:
+  default_config_hash: g9qdIiNxo9VQUCG6cqkXg5J1IleGc7acFh7u4UxGtHk
+id: node.service.body
+field_name: body
+entity_type: node
+bundle: service
+label: Corps
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

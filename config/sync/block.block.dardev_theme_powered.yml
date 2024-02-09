@@ -1,0 +1,22 @@
+uuid: b0977744-b73b-4ffd-a397-77eeb0119c0c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dardev_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: dardev_theme_powered
+theme: dardev_theme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: dfef5ad3-4fbf-4278-b54a-130da64cd51f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_facebook
+    - node.type.team
+_core:
+  default_config_hash: QK_0Lquc4JCrNPYt25lqGFka5aoZzazeeaB2PuSPWPo
+id: node.team.field_team_facebook
+field_name: field_team_facebook
+entity_type: node
+bundle: team
+label: 'Team Facebook'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

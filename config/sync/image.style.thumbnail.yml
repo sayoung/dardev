@@ -1,0 +1,17 @@
+uuid: 7bf1d056-1486-46ca-b851-a18224e8564c
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Pr_n3NYnG07tTSLebAwJDbpsyNMNDm5ENiN-DTurf0o
+name: thumbnail
+label: 'Thumbnail (150×150)'
+effects:
+  d2b6caee-0c96-4a61-8e1a-2630d7bae4ab:
+    uuid: d2b6caee-0c96-4a61-8e1a-2630d7bae4ab
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 150
+      height: 150
+      anchor: center-center

@@ -1,0 +1,22 @@
+uuid: 68b5a7f2-e6fe-4cd5-86b9-386659ca219b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dardev_theme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: dardev_theme_breadcrumbs
+theme: dardev_theme
+region: offcanvas
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: "Fils d'ariane"
+  label_display: '0'
+  provider: system
+visibility: {  }

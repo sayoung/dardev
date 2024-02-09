@@ -1,0 +1,23 @@
+uuid: 4a7d24f7-d92d-416a-8fcf-d4dded3c2203
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - drdv_subtheme
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: drdv_subtheme_search_form_narrow
+theme: drdv_subtheme
+region: offcanvas
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulaire de recherche (étroit)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

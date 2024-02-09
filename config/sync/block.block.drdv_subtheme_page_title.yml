@@ -1,0 +1,20 @@
+uuid: 9bbe7c75-0b20-4fb9-a95b-1214ba2ffef1
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - drdv_subtheme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: drdv_subtheme_page_title
+theme: drdv_subtheme
+region: offcanvas
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  label_display: '0'
+  provider: core
+visibility: {  }

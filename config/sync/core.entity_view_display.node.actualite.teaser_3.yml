@@ -1,0 +1,49 @@
+uuid: ef4c4dbf-7b8e-4edd-95ce-b83b109a228c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_3
+    - field.field.node.actualite.body
+    - field.field.node.actualite.field_service_icon
+    - field.field.node.actualite.field_service_images
+    - image.style.height
+    - node.type.actualite
+  module:
+    - image
+    - user
+id: node.actualite.teaser_3
+targetEntityType: node
+bundle: actualite
+mode: teaser_3
+content:
+  field_service_icon:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_service_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: height
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  langcode: true

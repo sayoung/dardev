@@ -1,0 +1,35 @@
+uuid: bb27fee9-a988-4441-b1ea-e298da764bb7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-second
+  module:
+    - dardevthemer
+    - system
+  theme:
+    - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
+_core:
+  default_config_hash: R8WU5TSCClbCX_F4f-hM8yTA4oNvzZ1zLK-2nC483tc
+id: menusecond
+theme: drdv_subtheme
+region: sidebar_right
+weight: -13
+provider: null
+plugin: 'system_menu_block:menu-second'
+settings:
+  id: 'system_menu_block:menu-second'
+  label: 'Company Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/partners\r\n/careers\r\n/our-awards\r\n/events\r\n/team-grid"

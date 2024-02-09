@@ -1,0 +1,26 @@
+uuid: 8f6fcbb7-8224-4233-a9d0-87fb334ab389
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.portfolio
+  module:
+    - text
+_core:
+  default_config_hash: c9q1A_sX_q_bzU9C74hmHqWSuAX_jRqNgqCuhUaNPBw
+id: node.portfolio.body
+field_name: body
+entity_type: node
+bundle: portfolio
+label: Corps
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

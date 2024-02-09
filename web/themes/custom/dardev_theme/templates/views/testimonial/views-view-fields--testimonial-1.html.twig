@@ -1,0 +1,24 @@
+
+<!-- Testimonials item -->
+<div class="testimonials-3-item">
+    <div class="testimonials-3-icon">
+        <i class="icon-quotation-mark"></i>
+    </div>
+    <blockquote class="testimonials-3-text">                                    
+        <p class="mb-0">
+         {{ fields.body.content|striptags|trim }}
+        </p>                                    
+        <footer class="testimonials-3-author pt-30 clearfix">                                                    
+            <div class="testimonials-3-author-img float-start">
+                <img width="44" height="44" src="{{ fields.field_testimonial_avatar.content|striptags|trim  }}" alt="Image description is here" />
+            </div>                                        
+            <div class="overflow-hidden">
+               {{ fields.field_testimonial_name.content|striptags|trim  }}
+                <div class="small">
+                  {{ fields.field_testimonial_job.content|striptags|trim  }}
+                </div>
+            </div>                                        
+        </footer>                                                    
+    </blockquote>
+</div>
+<!-- End Testimonials item -->

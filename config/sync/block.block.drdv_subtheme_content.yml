@@ -1,0 +1,22 @@
+uuid: 8861e5bc-90e2-4009-bfcc-65248cc77829
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drdv_subtheme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: drdv_subtheme_content
+theme: drdv_subtheme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: '0'
+  provider: system
+visibility: {  }

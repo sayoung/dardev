@@ -1,0 +1,26 @@
+uuid: 4274db21-5036-4ab1-b882-f93cc400943a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.location
+  module:
+    - text
+_core:
+  default_config_hash: Yj1Ln9nbFgQzcLMWfHiO1inc5txX_AcMyxap3Mxtnko
+id: node.location.body
+field_name: body
+entity_type: node
+bundle: location
+label: Corps
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

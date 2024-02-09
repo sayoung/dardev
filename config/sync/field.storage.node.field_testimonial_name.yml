@@ -1,0 +1,23 @@
+uuid: 097a7838-d6ef-4ba8-8f9b-91f21707c1f0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: XNk4TwUYLU09puGIlpjZMezM4j9YdvucWjIdPnk7dvA
+id: node.field_testimonial_name
+field_name: field_testimonial_name
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

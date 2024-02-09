@@ -1,0 +1,84 @@
+<?php
+
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\HtmlCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Render\RendererInterface;
+use Drupal\taxonomy\Entity\Term;
+
+function md_carousel_theme($existing, $type, $theme, $path)
+{
+  return [
+    'home_slide' => [
+      'variables' => [
+        'slide' => NULL
+      ],
+    ],
+    'home_axis' => [
+      'variables' => [
+        'axis' => NULL
+      ],
+    ],
+    'home_axis_interne' => [
+      'variables' => [
+        'axis' => NULL
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for node_form.
+ */
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function md_carousel_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_announcement_form' || $form_id == 'node_announcement_edit_form') {
+      // Adding AJAX properties to 'field_status'.
+      $form['field_status']['widget']['#ajax'] = [
+          'callback' => 'md_carousel_status_ajax_callback',
+          'wrapper' => 'edit-field-number-post-wrapper',
+          'event' => 'change',
+          'progress' => [
+              'type' => 'throbber',
+              'message' => t('Updating...'),
+          ],
+      ];
+
+      // Wrapper for 'field_number_post'.
+      $form['field_number_post']['#prefix'] = '<div id="edit-field-number-post-wrapper">';
+      $form['field_number_post']['#suffix'] = '</div>';
+
+      // Wrapper for 'field_date_de_prolongation'.
+      $form['field_date_de_prolongation']['#prefix'] = '<div id="edit-field-date-de-prolongation-wrapper">';
+      $form['field_date_de_prolongation']['#suffix'] = '</div>';
+
+      // Wrapper for 'field_motif'.
+      $form['field_motif']['#prefix'] = '<div id="edit-field-motif-wrapper">';
+      $form['field_motif']['#suffix'] = '</div>';
+  }
+}
+
+/**
+* AJAX callback for the 'field_status' field.
+*/
+function md_carousel_status_ajax_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $renderer = \Drupal::service('renderer');
+  $response = new AjaxResponse();
+
+  $user_input = $form_state->getUserInput();
+  $selected_value = $user_input['field_status'];
+
+  // Update access based on 'field_status'.
+  $form['field_number_post']['#access'] = in_array($selected_value, ['35', '36', '107']);
+  $form['field_date_de_prolongation']['#access'] = ($selected_value === '107');
+  $form['field_motif']['#access'] = in_array($selected_value, ['106', '108']);
+
+  // Re-render elements and update the HTML.
+  $response->addCommand(new HtmlCommand('#edit-field-number-post-wrapper', $renderer->renderRoot($form['field_number_post'])));
+  $response->addCommand(new HtmlCommand('#edit-field-date-de-prolongation-wrapper', $renderer->renderRoot($form['field_date_de_prolongation'])));
+  $response->addCommand(new HtmlCommand('#edit-field-motif-wrapper', $renderer->renderRoot($form['field_motif'])));
+
+  return $response;
+}

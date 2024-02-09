@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains dardev_newsletter.module.
+ */
+use Drupal\block\Entity\Block;
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\dardev_newsletter\Newsletter\Newsletter;
+
+/**
+ * Implements hook_help().
+ */
+function dardev_newsletter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dardev_newsletter module.
+    case 'help.page.dardev_newsletter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Collect emails and send newsletter to newsletter.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function dardev_newsletter_theme() {
+  // We use a template file to allow for translation of blocks of content.
+  // Therefore we need to add this content at the theming layer.
+
+  return [
+    'dardev_newsletter_description' => [
+      'template' => 'description',
+      'variables' => [],
+    ],
+    'newsletter' => [
+      'template' => 'newsletter',
+      'variables' => array('form' => NULL),
+    ],
+  ];
+}
+
+
+function dardev_newsletter_theme_suggestions_newsletter(array $variables) {
+
+  $suggestions = [];
+  $suggestions[] = 'hookname__' . $variables['form']->form['#build_id'];
+
+  
+  return $suggestions;
+}
+

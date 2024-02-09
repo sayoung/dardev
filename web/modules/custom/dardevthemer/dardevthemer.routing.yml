@@ -1,0 +1,15 @@
+dardevthemer.admin.customize_save:
+   path: 'admin/dardevthemer_customize/save'
+   defaults:
+      _title: 'Save Customize'
+      _controller: '\Drupal\dardevthemer\Controller\CustomizeController::save'
+   requirements:
+      _permission: 'administer dardev_customize'
+
+dardevthemer.admin.customize_preview:
+   path: 'admin/dardevthemer_customize/preview'
+   defaults:
+      _title: 'Preview Customize'
+      _controller: '\Drupal\dardevthemer\Controller\CustomizeController::preview'
+   requirements:
+      _permission: 'administer dardev_customize preview'

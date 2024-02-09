@@ -1,0 +1,22 @@
+uuid: 171a7c04-6774-4ec9-ab0d-c24e067f3b86
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - drdv_subtheme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: drdv_subtheme_primary_local_tasks
+theme: drdv_subtheme
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets principaux'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

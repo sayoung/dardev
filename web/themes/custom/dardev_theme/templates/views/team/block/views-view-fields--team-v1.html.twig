@@ -1,0 +1,46 @@
+
+
+<div class="team-item">
+   <div class="team-item-image">
+       
+      {{ fields.field_team_image.content }}
+       
+       <div class="team-item-detail">
+           <div class="team-social-links">
+            {% if fields.field_team_facebook.content|striptags|trim %}
+               <a href="{{ fields.field_team_facebook.content|striptags|trim }}" target="_blank" rel="noopener nofollow">
+                   <div class="visually-hidden">
+                       Facebook
+                   </div>
+                   <i class="fa-facebook-f"></i>
+               </a>
+               {% endif %} 
+               {% if fields.field_team_twitter.content|striptags|trim %}
+               <a href="{{ fields.field_team_twitter.content|striptags|trim }}" target="_blank" rel="noopener nofollow">
+                   <div class="visually-hidden">
+                       Twitter
+                   </div>
+                   <i class="fa-twitter"></i>
+               </a>
+               {% endif %} 
+               {% if fields.field_team_linkedin.content|striptags|trim %}
+               <a href="{{ fields.field_team_linkedin.content|striptags|trim }}" target="_blank" rel="noopener nofollow">
+                   <div class="visually-hidden">
+                       Pinterest
+                   </div>
+                   <i class="fa-pinterest-p"></i>
+               </a>
+               {% endif %} 
+           </div>
+       </div>
+       
+   </div>
+   <div class="team-item-descr">
+       <div class="team-item-name">
+         {{ fields.field_team_name.content|striptags|trim }}
+       </div>
+       <div class="team-item-role">
+         {{ fields.field_team_position.content }}
+       </div>
+   </div>
+</div>       

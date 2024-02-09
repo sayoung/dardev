@@ -1,0 +1,7 @@
+dardev_pagebuilder_add_action:
+   route_name: dardev_pagebuilder.admin.add
+   title: 'Add Dardev Content Builder'
+   route_parameters:
+        bid: '0'
+   appears_on:
+      - dardev_pagebuilder.admin

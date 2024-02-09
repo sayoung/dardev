@@ -1,0 +1,20 @@
+uuid: 8538a460-1e76-4d77-a145-23b89219f08b
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - dardev_theme
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: dardev_theme_primary_admin_actions
+theme: dardev_theme
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Actions d'administration principales"
+  label_display: '0'
+  provider: core
+visibility: {  }

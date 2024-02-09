@@ -1,0 +1,13 @@
+uuid: db5fbe92-042d-4584-b246-fde923f9a110
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: MGF7Hga8E6yKF4fQlAauMJgM6etdtyygGMa3NfaAaIg
+id: node.teaser_4
+label: 'Teaser 4'
+description: ''
+targetEntityType: node
+cache: true
