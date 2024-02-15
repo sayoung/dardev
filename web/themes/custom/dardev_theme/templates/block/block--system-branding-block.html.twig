@@ -12,19 +12,18 @@
  * - site_slogan: Slogan for site as defined in Site information settings.
  */
 #}
-
+ 
 {% set attributes = attributes.addClass('site-branding') %}
 {% block content %}
-  {% if site_logo %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding-logo">
-      {% if setting_logo %}
-        <img class="logo-default" src="{{ site_logo|replace({'logo.svg': 'logo.png'}) }}" alt="{{ 'Home'|t }}" />
-        <img class="logo-white" src="{{ site_logo|replace({'logo.svg': 'logo-white.png'}) }}" alt="{{ 'Home'|t }}" />
+    <a href="{{ path('<front>') }}" class="logo" title="{{ 'Home'|t }}" >
+      {% if site_logo %}
+              <img src="{{ site_logo|replace({'logo.svg': 'logo.png'}) }}" alt="{{ 'DARDEV'|t }}" width="150" height="34" />
+          
       {% else %}  
-        <img class="logo-site" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+        <img src="{{ site_logo|replace({'logo.svg': 'logo.png'}) }}" alt="{{ 'DARDEV'|t }}" width="105" height="34" />
       {% endif %}  
     </a>
-  {% endif %}
+
   {% if site_name or site_slogan %}
     <div class="site-branding__text">
       {% if site_name %}
