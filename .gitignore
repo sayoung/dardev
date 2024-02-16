@@ -64,3 +64,4 @@
 /.idea
 config/sync/system.performance.yml
 web/modules/custom/rename_module/
+*.zip
