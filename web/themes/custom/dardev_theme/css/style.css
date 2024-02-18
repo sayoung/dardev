@@ -3515,7 +3515,7 @@ a.logo:hover{
     top: 0;
     left: 0;
     text-align: left;
-    background: rgba(255,255,255, .98);
+    background: rgb(69, 87, 159);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.025),0px 1px 1px 0px rgba(0, 0, 0, 0.01),0px 0px 50px 0px rgba(0, 0, 0, 0.07);
     z-index: 1030;
     transition: all 0.2s var(--ease-default);
@@ -5517,7 +5517,7 @@ a.logo:hover{
     margin: 0;
     padding: 0 calc(40px + var(--services-text-overlap)) 0 0;
     border: none;
-    font-size: 40px;
+    font-size: 33px;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.037em;
