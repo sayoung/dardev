@@ -19,7 +19,11 @@
 		<div role="main" class="main main-page{{ has_breadcrumb }}">
 		
 			<div class="clearfix"></div>
-			
+			{% if page.slideshow_content %}
+				<div class="slideshow_content area">
+					{{ page.slideshow_content }}
+				</div>
+			{% endif %}	
 
 			{% if page.help %}
 				<div class="help gav-help-region">
