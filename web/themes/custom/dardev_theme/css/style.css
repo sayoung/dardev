@@ -6554,6 +6554,10 @@ img.services-image{
     padding-left: 30px;
     border-left: 1px solid var(--color-gray-light-3);
 }
+.alt-features-item.border-right{
+    padding-left: 30px;
+    border-left: 1px solid var(--color-gray-light-3);
+}
 .alt-features-item.box-shadow{
     width: 100%;
     padding: 30px;
@@ -6598,6 +6602,10 @@ img.services-image{
     color: var(--color-gray-1);
 }
 .light-content .alt-features-item.border-left{
+    padding-left: 30px;
+    border-color: rgba(255,255,255, .25);
+}
+.light-content .alt-features-item.border-right{
     padding-left: 30px;
     border-color: rgba(255,255,255, .25);
 }
