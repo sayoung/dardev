@@ -277,6 +277,17 @@ if(!class_exists('element_drv_icon_box_classic')):
                   'class'     => 'width-1-4',
                ),
                array(
+                  'id'        => 'border_left_right',
+                  'type'      => 'select',
+                  'title'     => 'Border ligne couleur',
+                  'options'   => array(
+                     ''    => t('None'),
+                     'border-left'    => t('Left'), 
+                     'border-right' => t('Right')
+                  ),
+                  'class'     => 'width-1-4',
+               ),
+               array(
                   'id'        => 'margin',
                   'type'      => 'select',
                   'title'     => t('Margin Bottom'),
@@ -347,6 +358,7 @@ if(!class_exists('element_drv_icon_box_classic')):
             'title_color'                 => 'text-dark',
             'desc_color'                  => 'text-dark',
             'vertical_align_content'      => 'top',
+            'border_left_right'           => '',
             'target'                      => '',
             'animate'                     => '',
             'animate_delay'               => '',
@@ -446,7 +458,7 @@ if(!class_exists('element_drv_icon_box_classic')):
          <?php if($icon_position == 'top-left-title' || $icon_position == 'top-right-title'){ ?>
             <div class="widget gsc-icon-box <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
                
-               <div class="highlight_content verticle-align-<?php print $vertical_align_content ?>">
+               <div class="highlight_content verticle-align-<?php print $vertical_align_content ?>  <?php print $border_left_right ?>">
                   <div class="title-inner">
                      
                      <?php if(($icon || $image) && $icon_position=='top-left-title'){ ?>
