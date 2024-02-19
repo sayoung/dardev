@@ -457,7 +457,6 @@ if(!class_exists('element_drv_icon_box_classic')):
          ob_start();
          ?>
         
-         <?php if($icon_position=='top-center' || $icon_position=='top-left' || $icon_position=='top-right' || $icon_position=='right' || $icon_position=='left' || $icon_position=='left-2'){ ?>
 
                 <?php if(($icon || $image)){ ?>
                         <div class="alt-features-item <?php print $border_left_right ?> <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
@@ -476,7 +475,7 @@ if(!class_exists('element_drv_icon_box_classic')):
                         </div>
                <?php } ?>
      
-         <?php } ?>   
+          
 
          
 
