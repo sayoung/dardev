@@ -4,6 +4,11 @@ function dardev_content_builder_set_elements(){
     'drv_column',
     'drv_row',
     'drv_accordion',
+    'drv_chiffre_cle',
+    'drv_view',
+    'drv_our_service',
+    'drv_our_story',
+    'drv_services_carousel',
     'drv_box_color', 
     'drv_box_hover', 
     'drv_button',
@@ -32,7 +37,6 @@ function dardev_content_builder_set_elements(){
     'drv_progress_work',
     'drv_progress_work_list',
     'drv_quote_text',
-    'drv_services_carousel',
     'drv_socials',
     'drv_tabs',
     'drv_tabs_content',
@@ -41,9 +45,7 @@ function dardev_content_builder_set_elements(){
     'drv_text_noeditor',
     'drv_text_rotate',
     'drv_video_box',
-    'drv_view',
-    'drv_our_service',
-    'drv_our_story',
+
   );
 }
 
