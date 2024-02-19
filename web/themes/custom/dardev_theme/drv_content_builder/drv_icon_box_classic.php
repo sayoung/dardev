@@ -74,12 +74,32 @@ if(!class_exists('element_drv_icon_box_classic')):
                   'desc'      => t('Use image icon instead of icon class'),
                ),
                array(
+                  'id'            => 'title_position',
+                  'type'          => 'select',
+                  'options'       => array(
+                     'text-left'            => 'text left', 
+                     'text-right'           => 'text right',
+                     'text-center'          => 'text center',
+                  ),
+                  'title'  => t('Text Position'),
+               ),
+               array(
+                  'id'            => 'description_position',
+                  'type'          => 'select',
+                  'options'       => array(
+                     'text-left'            => 'text left', 
+                     'text-right'           => 'text right',
+                     'text-center'          => 'text center',
+                  ),
+                  'title'  => t('Description Position'),
+               ),
+               array(
                   'id'            => 'icon_position',
                   'type'          => 'select',
                   'options'       => array(
-                     'top-center'            => 'Top Center', 
-                     'top-left'              => 'Top Left',
-                     'top-right'             => 'Top Right',
+                     'text-left'            => 'Top Center', 
+                     'text-right'              => 'Top Left',
+                     'text-center'             => 'Top Right',
                      'right'                 => 'Right',
                      'left'                  => 'Left',
                      'left-2'                => 'Left II',
@@ -340,7 +360,9 @@ if(!class_exists('element_drv_icon_box_classic')):
             'hidden_content'              => '',
             'icon'                        => '',
             'image'                       => '',
-            'icon_position'               => 'top',
+            'title_position'              => '',
+            'description_position'        => '',
+            'icon_position'               => 'center',
             'box_background'              => '',
             'icon_color_available'        => '',
             'icon_color'                  => '',
@@ -433,20 +455,18 @@ if(!class_exists('element_drv_icon_box_classic')):
          ?>
         
          <?php if($icon_position=='top-center' || $icon_position=='top-left' || $icon_position=='top-right' || $icon_position=='right' || $icon_position=='left' || $icon_position=='left-2'){ ?>
-  
-
-
-               
 
                 <?php if(($icon || $image)){ ?>
-                        <div class="alt-features-item <?php $icon_position  ?> <?php print $border_left_right ?> <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
-                           <div class="alt-features-icon">
-                              <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
-                              <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
+                        <div class="alt-features-item <?php print $border_left_right ?> <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
+                           <div class="alt-features-icon <?php print $icon_position ?>">
+                              <?php if($icon){ ?><span class="icon  <?php print $icon ?>"></span> <?php } ?>
+                              <?php if($image){ ?><span class="icon "><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
                            </div>
-                           <h3 class="alt-features-title"><?php print strip_tags($title) ?></h3>
+                           <?php if($title){ ?>
+                           <h3 class="alt-features-title <?php print $title_position ?>"><?php print strip_tags($title) ?></h3>
+                           <?php } ?> 
                            <?php if($content){ ?>
-                              <div class="alt-features-descr">
+                              <div class="alt-features-descr <?php print $description_position ?>">
                                  <?php print $content; ?>
                               </div>
                               <?php } ?>  
@@ -455,46 +475,7 @@ if(!class_exists('element_drv_icon_box_classic')):
      
          <?php } ?>   
 
-         <?php if($icon_position == 'top-left-title' || $icon_position == 'top-right-title'){ ?>
-            <div class="widget gsc-icon-box <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
-               
-               <div class="highlight_content verticle-align-<?php print $vertical_align_content ?>  <?php print $border_left_right ?>">
-                  <div class="title-inner">
-                     
-                     <?php if(($icon || $image) && $icon_position=='top-left-title'){ ?>
-                        <div class="highlight-icon">
-                           <span class="icon-inner <?php echo $icon_class_inner ?>">  
-                              <span class="icon-container <?php print $icon_class ?>"  <?php print $style_icon ?>>
-                                 <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
-                                 <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
-                              </span>
-                           </span>
-                        </div>
-                     <?php } ?>
-                     
-                     <?php if($title){ ?>
-                        <h3 class="title <?php print $classes_title_text ?>"><?php print $title_html; ?></h3>
-                     <?php } ?>
-
-                     <?php if(($icon || $image) && $icon_position=='top-right-title'){ ?>
-                        <div class="highlight-icon">
-                           <span class="icon-inner <?php echo $icon_class_inner ?>">  
-                              <span class="icon-container <?php print $icon_class ?>" <?php print $style_icon ?>>
-                                 <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
-                                 <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
-                              </span>
-                           </span>
-                        </div>
-                     <?php } ?>
-
-                  </div>
-                  <?php if($content){ ?>
-                     <div class="desc <?php print $classes_desc_text ?>"><?php print $content; ?></div>
-                  <?php } ?>   
-               </div>
-
-            </div> 
-         <?php } ?>   
+         
 
          <?php return ob_get_clean() ?>
        <?php
