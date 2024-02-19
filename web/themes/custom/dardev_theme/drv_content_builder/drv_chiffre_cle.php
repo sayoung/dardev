@@ -128,7 +128,7 @@ if (!class_exists("element_drv_chiffre_cle.php")):
             ob_start();
             ?>
                         <!-- Achievements Section -->
-						<section class="page-section bg-dark-1 bg-dark-alpha-90 parallax-5 light-content" <?php print $css_background ?>>
+						<section class="page-section bg-dark-1 bg-dark-alpha-90 parallax-5 light-content" >
 							<div class="container position-relative">
 								
 								<div class="row">
