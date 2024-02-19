@@ -421,24 +421,13 @@ if(!class_exists('element_drv_icon_box_classic')):
          ?>
         
          <?php if($icon_position=='top-center' || $icon_position=='top-left' || $icon_position=='top-right' || $icon_position=='right' || $icon_position=='left' || $icon_position=='left-2'){ ?>
-            <div class="widget gsc-icon-box <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
-               
-               <?php if(($icon || $image) && $icon_position != 'right'){ ?>
-                  <div class="highlight-icon verticle-align-<?php print $vertical_align_content ?>">
-                     <span class="icon-inner <?php echo $icon_class_inner ?>">   
-                        <span class="icon-container <?php print $icon_class ?>" <?php print $style_icon ?>>
-                           <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
-                           <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
-                        </span>
-                     </span>
-                  </div>
-               <?php } ?>
+  
+
 
                
 
                 <?php if(($icon || $image) && $icon_position == 'right'){ ?>
-                     <div class="col-lg-6">
-                        <div class="alt-features-item">
+                        <div class="alt-features-item <?php $icon_position  ?> <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
                            <div class="alt-features-icon">
                               <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
                               <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
@@ -450,10 +439,8 @@ if(!class_exists('element_drv_icon_box_classic')):
                               </div>
                               <?php } ?>  
                         </div>
-                     </div>
                <?php } ?>
-
-            </div> 
+     
          <?php } ?>   
 
          <?php if($icon_position == 'top-left-title' || $icon_position == 'top-right-title'){ ?>
