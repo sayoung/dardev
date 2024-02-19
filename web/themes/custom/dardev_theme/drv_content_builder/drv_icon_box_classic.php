@@ -439,7 +439,7 @@ if(!class_exists('element_drv_icon_box_classic')):
                
 
                 <?php if(($icon || $image)){ ?>
-                        <div class="alt-features-item <?php $icon_position  ?> <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
+                        <div class="alt-features-item <?php $icon_position  ?> <?php print $border_left_right ?> <?php if(count($class)>0) print implode(' ', $class) ?>" <?php if(count($style) > 0) print 'style="'.implode(';', $style).'"' ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
                            <div class="alt-features-icon">
                               <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
                               <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
