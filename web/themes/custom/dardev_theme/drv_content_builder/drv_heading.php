@@ -388,25 +388,14 @@ if(!class_exists('element_drv_heading')):
          ?>
 
       
-         <div class="widget gsc-heading <?php print implode(' ', $class) ?>"<?php print $style; ?> <?php print dardev_content_builder_print_animate_wow('', $animate_delay) ?>>
-            
-            <div class="heading-content clearfix">
-               <?php if($sub_title){ ?><div class="sub-title <?php print $classes_subtitle_text ?>"><span><?php print $sub_title; ?></span></div><?php } ?>
-               <?php if($title){ ?><<?php echo $html_tags ?> class="title <?php print $classes_title_text; ?>">
-                  <span><?php print $title; ?></span>
-               </<?php echo $html_tags ?>><?php } ?>
-               <?php if($desc){ ?>
-                  <div class="title-desc <?php print $classes_desc_text ?>"><?php print $desc; ?></div>
-               <?php } ?>
-            </div>
-            
-            <?php if($button_link){ ?>
-               <div class="heading-action clearfix <?php print (empty($desc) ? 'no-margin' : 'margin-top-40'); ?>">
-                  <a href="<?php echo $button_link ?>" class="<?php print $button_style; ?>"><i class="btn-curve"></i><span><?php echo $button_text ?></span></a>
-               </div>
-            <?php } ?>
+                  
+                  <?php if($title){ ?><h2 class="section-caption mb-xs-10"><?php print $sub_title; ?></h2><?php } ?>                  
+                  <?php if($title){ ?><h3 class="section-title-small mb-40"><?php print $title; ?></h3><?php } ?>
+                  <div class="section-line"></div>
 
-         </div>
+
+
+
          <div class="clearfix"></div>
          <?php return ob_get_clean() ?>
          <?php
