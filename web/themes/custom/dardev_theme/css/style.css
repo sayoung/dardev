@@ -6752,7 +6752,9 @@ img.services-image{
     color: var(--color-dark-mode-gray-1);
 }
 
-
+.number-type {
+    font-size: 20px;
+}
 /* ==============================
    Steps
    ============================== */

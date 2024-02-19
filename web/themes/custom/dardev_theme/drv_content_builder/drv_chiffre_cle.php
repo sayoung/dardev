@@ -161,7 +161,7 @@ if (!class_exists("element_drv_chiffre_cle.php")):
 											<!-- Number Item -->
 											<div class="col-sm-6 col-lg-5 mt-50 mt-xs-30 wow fadeScaleIn" data-wow-delay="0.4s">
 												<div class="number-title mb-10">
-													<?php print $$title ?><?php print $$type ?>
+													<?php print $$title ?><span class="number-type"><?php print $$type ?></span>
 												</div>
 												<div class="number-descr">
 													<?php print $$content ?>
