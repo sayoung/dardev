@@ -68,7 +68,7 @@ if (!class_exists("element_drv_chiffre_cle.php")):
                     ],
                 ],
             ];
-            for ($i = 1; $i <= 2; $i++) {
+            for ($i = 1; $i <= 4; $i++) {
                 $fields['fields'][] = array(
                     'id'     => "info_{$i}",
                     'type'   => 'info',
