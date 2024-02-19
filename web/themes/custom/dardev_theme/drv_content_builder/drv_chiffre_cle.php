@@ -128,7 +128,7 @@ if (!class_exists("element_drv_chiffre_cle.php")):
             ob_start();
             ?>
                         <!-- Achievements Section -->
-						<section class="page-section bg-dark-1 bg-dark-alpha-90 parallax-5 light-content" style="background-image: url(/themes/custom/dardev_theme/images/full-width-images/section-bg-2.jpg)">
+						<section class="page-section bg-dark-1 bg-dark-alpha-90 parallax-5 light-content" <?php print $css_background ?>>
 							<div class="container position-relative">
 								
 								<div class="row">
