@@ -434,14 +434,7 @@ if(!class_exists('element_drv_icon_box_classic')):
                   </div>
                <?php } ?>
 
-               <div class="highlight_content verticle-align-<?php print $vertical_align_content ?>">
-                  <?php if($title){ ?>
-                     <h3 class="title <?php print $classes_title_text ?>"><?php print $title_html; ?></h3>
-                  <?php } ?>   
-                  <?php if($content){ ?>
-                     <div class="desc <?php print $classes_desc_text ?>"><?php print $content; ?></div>
-                  <?php } ?>   
-               </div>
+               
 
                 <?php if(($icon || $image) && $icon_position == 'right'){ ?>
                      <div class="col-lg-6">
@@ -451,9 +444,11 @@ if(!class_exists('element_drv_icon_box_classic')):
                               <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
                            </div>
                            <h3 class="alt-features-title"><?php print strip_tags($title) ?></h3>
-                           <div class="alt-features-descr">
-                           <?php print $title_html; ?>
-                           </div>
+                           <?php if($content){ ?>
+                              <div class="alt-features-descr">
+                                 <?php print $content; ?>
+                              </div>
+                              <?php } ?>  
                         </div>
                      </div>
                <?php } ?>
