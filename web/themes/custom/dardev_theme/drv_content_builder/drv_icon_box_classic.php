@@ -444,14 +444,18 @@ if(!class_exists('element_drv_icon_box_classic')):
                </div>
 
                 <?php if(($icon || $image) && $icon_position == 'right'){ ?>
-                  <div class="highlight-icon">
-                     <span class="icon-inner <?php echo $icon_class_inner ?>">
-                        <span class="icon-container <?php print $icon_class ?>" <?php print $style_icon ?>>
-                           <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
-                           <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
-                        </span>
-                     </span>
-                  </div>
+                     <div class="col-lg-6">
+                        <div class="alt-features-item">
+                           <div class="alt-features-icon">
+                              <?php if($icon){ ?><span class="icon <?php print $icon ?>"></span> <?php } ?>
+                              <?php if($image){ ?><span class="icon"><img src="<?php print $image ?>" alt="<?php print strip_tags($title) ?>"/> </span> <?php } ?>
+                           </div>
+                           <h3 class="alt-features-title"><?php print strip_tags($title) ?></h3>
+                           <div class="alt-features-descr">
+                           <?php print $title_html; ?>
+                           </div>
+                        </div>
+                     </div>
                <?php } ?>
 
             </div> 
