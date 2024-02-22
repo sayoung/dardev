@@ -7,6 +7,7 @@ function dardev_content_builder_set_elements(){
     'drv_chiffre_cle',
     'drv_view',
     'drv_our_service',
+    'drv_our_service_style_2',
     'drv_our_story',
     'drv_services_carousel',
     'drv_box_color', 
