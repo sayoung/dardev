@@ -3,3 +3,4 @@ type: module
 description: Collect emails and send newsletter to newsletter.
 core_version_requirement: ^8.8.0 || ^9 || ^10
 package: DARDEV
+ 
