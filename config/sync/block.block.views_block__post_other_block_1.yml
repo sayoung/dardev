@@ -17,8 +17,8 @@ _core:
   default_config_hash: darbTdQw9mJKGON_Ki-ASJtJ3aqHqsg_ACf856nJiNM
 id: views_block__post_other_block_1
 theme: drdv_subtheme
-region: sidebar_right
-weight: -12
+region: other
+weight: -10
 provider: null
 plugin: 'views_block:post_other-block_1'
 settings:

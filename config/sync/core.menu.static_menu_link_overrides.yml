@@ -8,3 +8,9 @@ definitions:
     weight: 0
     expanded: false
     enabled: true
+  standard__front_page:
+    menu_name: main
+    parent: 'menu_link_content:eaf2e1b0-773d-43fa-af6d-9a18affd5d69'
+    weight: -49
+    expanded: true
+    enabled: true

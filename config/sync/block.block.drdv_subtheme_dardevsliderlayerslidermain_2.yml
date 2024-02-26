@@ -13,7 +13,7 @@ third_party_settings:
 id: drdv_subtheme_dardevsliderlayerslidermain_2
 theme: drdv_subtheme
 region: other
-weight: 0
+weight: -11
 provider: null
 plugin: 'dardev_sliderlayer_block:dardev_sliderlayer_block____1'
 settings:

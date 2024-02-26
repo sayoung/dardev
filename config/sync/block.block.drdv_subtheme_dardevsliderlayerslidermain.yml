@@ -5,6 +5,7 @@ dependencies:
   module:
     - dardev_sliderlayer
     - dardevthemer
+    - system
   theme:
     - drdv_subtheme
 third_party_settings:
@@ -21,4 +22,8 @@ settings:
   label: 'Dardev SliderLayer - Slider Main'
   label_display: '0'
   provider: dardev_sliderlayer
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

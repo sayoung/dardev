@@ -5,15 +5,19 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - dardevthemer
     - system
   theme:
     - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
 _core:
   default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
 id: drdv_subtheme_main_menu
 theme: drdv_subtheme
-region: offcanvas
-weight: 0
+region: main_menu
+weight: -11
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +26,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 2
+  depth: 3
   expand_all_items: true
 visibility: {  }
