@@ -30,8 +30,11 @@
         "drupal/magnific_popup": "2.0.x-dev@dev",
         "drupal/mailchimp_signup": "^2.2",
         "drupal/pathauto": "^1.12",
+        "drupal/shs": "^2.0@RC",
         "drupal/views_infinite_scroll": "^2.0",
-        "drupal/webform": "^6.2"
+        "drupal/webform": "^6.2",
+        "drupal/webform_hierarchy": "^1.2",
+        "drupal/webform_shs": "^2.0@beta"
     },
     "conflict": {
         "drupal/drupal": "*"
