@@ -83,7 +83,7 @@ if (!class_exists("element_drv_element_slider")):
         "type" => "text",
         "desc" => "Link",
       ];
-      for ($i = 1; $i <= 10; $i++) {
+      for ($i = 1; $i <= 5; $i++) {
 
         $fields['fields'][] = array(
           'id' => "info_{$i}",
@@ -156,7 +156,7 @@ if (!class_exists("element_drv_element_slider")):
               <!-- Gallery -->
               <div class="work-full-media mt-0">
                 <div class="clearlist work-full-slider owl-carousel">
-                  <?php for ($i = 1; $i <= 10; $i++) { ?>
+                  <?php for ($i = 1; $i <= 5; $i++) { ?>
                     <?php
                     $image = "image_{$i}";
                     ?>
