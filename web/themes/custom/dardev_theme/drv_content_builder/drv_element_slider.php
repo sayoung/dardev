@@ -31,9 +31,8 @@ if (!class_exists("element_drv_element_slider")):
             "type" => "select",
             "title" => t("Style"),
             "options" => [
-              "skin-white" => "Background White",
-              "skin-dark" => "Background Dark",
-              "skin-white-border" => "Background White Border",
+              "left" => "Left",
+              "right" => "Right",
             ],
           ],
           [
@@ -127,22 +126,24 @@ if (!class_exists("element_drv_element_slider")):
       extract(dardev_merge_atts($default, $attr));
 
       $_id = "accordion-" . dardev_content_builder_makeid();
-      $classes = $style;
+      $text_classe = "";
+      $img_classe = "";
 
-      if ($el_class) {
-        $classes .= " " . $el_class;
+      if ($style == 'left') {
+        $text_classe = 'col-md-5 col-lg-4 offset-lg-1 mb-sm-40 d-flex align-items-center';
+        $img_classe = 'col-md-7 order-md-first';
+      } elseif ($style == 'right') {
+        $text_classe = 'col-md-5 col-lg-4 mb-sm-40 d-flex align-items-center';
+        $img_classe = 'col-md-7 offset-lg-1';
       }
 
-      if ($animate) {
-        $classes .= " wow " . $animate;
-      }
       ob_start();
       ?>
       <section class="page-section">
         <div class="container relative">
           <div class="row">
 
-            <div class="col-md-5 col-lg-4 offset-lg-1 mb-sm-40 d-flex align-items-center">
+            <div class="<?php print $text_classe ?>">
               <div class="w-100">
                 <h2 class="section-title-small mb-30 mb-md-20"><?php print $title_slider ?></h2>
                 <p class="text-gray mb-40 mb-sm-30"><?php print $content_slider ?></p>
@@ -151,7 +152,7 @@ if (!class_exists("element_drv_element_slider")):
               </div>
             </div>
 
-            <div class="col-md-7 order-md-first">
+            <div class="<?php print $img_classe ?>">
 
               <!-- Gallery -->
               <div class="work-full-media mt-0">
