@@ -64,22 +64,22 @@ if (!class_exists("element_drv_element_slider")):
       ];
 
       $fields['fields'][] = [
-        'id' => "info_0",
+        'id' => "info_desc",
         'type' => 'info',
         'desc' => "Information slider"
       ];
       $fields["fields"][] = [
-        "id" => "title_0",
+        "id" => "title_slider",
         "type" => "text",
         "title" => t("Title"),
       ];
       $fields["fields"][] = [
-        "id" => "content_0",
+        "id" => "content_slider",
         "type" => "textarea_without_html",
         "title" => t("Slider description"),
       ];
       $fields["fields"][] = [
-        "id" => "link_0",
+        "id" => "link_slider",
         "type" => "text",
         "desc" => "Link",
       ];
@@ -106,6 +106,9 @@ if (!class_exists("element_drv_element_slider")):
     public static function render_content($attr = [], $content = "")
     {
       $default = [
+        "title_slider" => "",
+        "content_slider" => "",
+        "link_slider" => "",
         "title" => "",
         "sub_title" => "",
         "description" => "",
@@ -141,14 +144,9 @@ if (!class_exists("element_drv_element_slider")):
 
             <div class="col-md-5 col-lg-4 offset-lg-1 mb-sm-40 d-flex align-items-center">
               <div class="w-100">
-                <?php
-                $title = "title_0";
-                $desc = "content_0";
-                $link = "link_0";
-                ?>
-                <h2 class="section-title-small mb-30 mb-md-20"><?php print $$title ?></h2>
-                <p class="text-gray mb-40 mb-sm-30"><?php print $$desc ?></p>
-                <div><a href="<?php print $$link ?>" class="btn btn-mod btn-round btn-large btn-hover-anim"><span>View</span></a></div>
+                <h2 class="section-title-small mb-30 mb-md-20"><?php print $title_slider ?></h2>
+                <p class="text-gray mb-40 mb-sm-30"><?php print $content_slider ?></p>
+                <div><a href="<?php print $link_slider ?>" class="btn btn-mod btn-round btn-large btn-hover-anim"><span>View</span></a></div>
               </div>
             </div>
 
