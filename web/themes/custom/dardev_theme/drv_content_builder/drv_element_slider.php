@@ -118,7 +118,7 @@ if (!class_exists("element_drv_element_slider")):
         "animate_delay" => "",
         "el_class" => "",
       ];
-      for ($i = 1; $i <= 10; $i++) {
+      for ($i = 1; $i <= 5; $i++) {
         $default["title_{$i}"] = "";
         $default["image_{$i}"] = "";
         $default["link_{$i}"] = "";
@@ -146,7 +146,8 @@ if (!class_exists("element_drv_element_slider")):
               <div class="w-100">
                 <h2 class="section-title-small mb-30 mb-md-20"><?php print $title_slider ?></h2>
                 <p class="text-gray mb-40 mb-sm-30"><?php print $content_slider ?></p>
-                <div><a href="<?php print $link_slider ?>" class="btn btn-mod btn-round btn-large btn-hover-anim"><span>View</span></a></div>
+                <div><a href="<?php print $link_slider ?>" class="btn btn-mod btn-round btn-large btn-hover-anim"><span>View</span></a>
+                </div>
               </div>
             </div>
 
@@ -159,9 +160,11 @@ if (!class_exists("element_drv_element_slider")):
                     <?php
                     $image = "image_{$i}";
                     ?>
-                  <div>
-                    <img class="lazyOwl" src="<?php print $$image ?>" alt="Image Description" />
-                  </div>
+                    <?php if ($$image) { ?>
+                      <div>
+                        <img class="lazyOwl" src="<?php print $$image ?>" alt="Image Description"/>
+                      </div>
+                    <?php } ?>
                   <?php } ?>
 
                 </div>
