@@ -12,6 +12,7 @@ function dardev_content_builder_set_elements(){
     'drv_element_slider',
     'drv_element_slider_multiple',
     'drv_element_progress',
+    'drv_element_tabs',
     'drv_our_story',
     'drv_services_carousel',
     'drv_box_color',
