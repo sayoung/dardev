@@ -12,7 +12,7 @@
 %}
 
 <!-- Start Display article for teaser page -->
-{% if view_mode == 'teaser' %} 
+{% if view_mode == 'teaser' %}
   <div class="post-block teaser-1 text-center">
     <div class="post-image">
       {{ content.field_image }}
@@ -23,13 +23,13 @@
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
           <span class="post-comment"><i class="fas fa-comments"></i> {{ comment_count }}{{' Comments'|t}}</span>
         </div>
-        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3> 
-        <div class="post-body">{{ content.body }}</div>          
-        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"><i class="fas fa-angle-right"></i></a> </div>          
+        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>
+        <div class="post-body">{{ content.body }}</div>
+        <div class="post-readmore"> <a href="{{ url }}" rel="bookmark"><i class="fas fa-angle-right"></i></a> </div>
     </div>
   </div>
 
-{% elseif view_mode == 'teaser_2' %} 
+{% elseif view_mode == 'teaser_2' %}
   <div class="post-block teaser-2">
     <div class="post-image">
       {{ content.field_image }}
@@ -40,7 +40,7 @@
           <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
           <span class="post-comment"><i class="fas fa-comments"></i> {{ comment_count }}{{' Comments'|t}}</span>
         </div>
-        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>          
+        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>
     </div>
   </div>
 
@@ -48,53 +48,52 @@
 <!-- End Display article for teaser page -->
 {% else %}
 <!-- Start Display article for detail page -->
+  <!-- Header Section -->
+  <section class="page-section bg-gray-light-1 bg-light-alpha-90 parallax-5" style="background-image: url(themes/custom/dardev_theme/images/full-width-images/section-bg-1.jpg)" id="home">
+    <div class="container position-relative pt-30 pt-sm-50">
+      <div class="text-center">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h1 class="hs-title-1 mb-20">
+              <span class="wow charsAnimIn" data-splitting="chars">{{ label }}</span>
+            </h1>
 
-<article{{ attributes.addClass(classes) }}>
-  <div class="post-block">
-      
-    <div class="post-thumbnail post-{{ post_format }}">
-      {% if post_format == 'video' or post_format == 'audio' and drv_iframe %}
-        {{ drv_iframe|raw }}
-      {% elseif post_format == 'gallery' and content.field_post_gallery %}
-        {{ content.field_post_gallery }}
-      {% else %}
-        {{ content.field_image }}
-      {% endif %}  
-    </div>
-
-    <div class="post-content">
-      <div class="post-meta">
-          <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
-          <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          <span class="post-comment"><i class="fas fa-comments"></i> {{ comment_count }}{{' Comments'|t}}</span>
+            <!-- Author, Categories, Comments -->
+            <div class="blog-item-data mt-30 mt-sm-10 mb-0 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="d-inline-block me-3">
+                <a href="#"><i class="mi-clock size-16"></i><span class="visually-hidden">Date:</span> {{ node.getCreatedTime()|date("F d") }}</a>
+              </div>
+              <div class="d-inline-block me-3">
+                <a href="#"><i class="mi-user size-16"></i><span class="visually-hidden">Author:</span> {{ author_name }}</a>
+              </div>
+            </div>
+          </div>
         </div>
-      {{ title_prefix }}
-         <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
-      {{ title_suffix }}  
-      
-      {% if display_submitted %}
-        <div class="node__meta hidden">
-          {{ author_picture }}
-          <span{{ author_attributes }}>
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-          </span>
-          {{ metadata }}
-        </div>
-      {% endif %}
-
-      <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content|without('field_image','field_post_format', 'field_post_type', 'field_post_embed', 'field_post_gallery', 'comment') }}
       </div>
-      
-      <div id="node-single-comment">
-        {{ content.comment }}
-      </div>
-
     </div>
+  </section>
+  <!-- End Header Section -->
 
+<!-- Section -->
+<section class="page-section">
+  <div class="container relative">
+    <div class="row">
+      <!-- Post -->
+      <div class="blog-item mb-80 mb-xs-40">
+
+        <div class="blog-item-body">
+          <div class="blog-media mb-40 mb-xs-30">
+            {{ content.field_image }}
+          </div>
+          {{ content.body }}
+        </div>
+      </div>
+      <!-- End Post -->
+    </div>
   </div>
+</section>
+  <!-- End Section -->
 
-</article>
 
 <!-- End Display article for detail page -->
 {% endif %}
