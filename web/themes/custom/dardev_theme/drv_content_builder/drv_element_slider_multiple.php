@@ -1,29 +1,17 @@
 <?php
-if (!class_exists("element_drv_element_slider")):
-  class element_drv_element_slider
+if (!class_exists("element_drv_element_slider_multiple")):
+  class element_drv_element_slider_multiple
   {
     public function render_form()
     {
       $fields = [
         "type" => "element_element_slider",
-        "title" => t("Element slider"),
+        "title" => t("Element slider multiple"),
         "fields" => [
           [
             "id" => "title",
             "type" => "text",
             "title" => t("Title"),
-            "admin" => true,
-          ],
-          [
-            "id" => "sub_title",
-            "type" => "text",
-            "title" => t("Sub title"),
-            "admin" => true,
-          ],
-          [
-            "id" => "description",
-            "type" => "text",
-            "title" => t("Description"),
             "admin" => true,
           ],
           [
@@ -62,26 +50,6 @@ if (!class_exists("element_drv_element_slider")):
         ],
       ];
 
-      $fields['fields'][] = [
-        'id' => "info_desc",
-        'type' => 'info',
-        'desc' => "Information slider"
-      ];
-      $fields["fields"][] = [
-        "id" => "title_slider",
-        "type" => "text",
-        "title" => t("Title"),
-      ];
-      $fields["fields"][] = [
-        "id" => "content_slider",
-        "type" => "textarea_without_html",
-        "title" => t("Slider description"),
-      ];
-      $fields["fields"][] = [
-        "id" => "link_slider",
-        "type" => "text",
-        "desc" => "Link",
-      ];
       for ($i = 1; $i <= 5; $i++) {
 
         $fields['fields'][] = array(
@@ -90,6 +58,23 @@ if (!class_exists("element_drv_element_slider")):
           'desc' => "Slider image {$i}"
         );
 
+        $fields["fields"][] = [
+          "id" => "title_{$i}",
+          "type" => "text",
+          "title" => t("Title"),
+        ];
+
+        $fields["fields"][] = [
+          "id" => "content_{$i}",
+          "type" => "textarea_without_html",
+          "title" => t("Slider description"),
+        ];
+
+        $fields["fields"][] = [
+          "id" => "link_{$i}",
+          "type" => "text",
+          "desc" => "Link",
+        ];
 
         $fields["fields"][] = [
           "id" => "image_{$i}",
@@ -139,44 +124,42 @@ if (!class_exists("element_drv_element_slider")):
 
       ob_start();
       ?>
-      <section class="page-section">
-        <div class="container relative">
-          <div class="row">
+      <div class="fullwidth-slider owl-carousel bg-gray">
+        <?php for ($i = 1; $i <= 5; $i++) { ?>
+          <?php $title = "title_{$i}";
+          $content = "content_{$i}";
+          $image = "image_{$i}";
+          $link = "link_{$i}"; ?>
+          <?php if ($$title && $$image) { ?>
+            <section class="page-section bg-gray-lighter">
+              <div class="container relative">
+                <div class="row">
 
-            <div class="<?php print $text_classe ?>">
-              <div class="w-100">
-                <h2 class="section-title-small mb-30 mb-md-20"><?php print $title_slider ?></h2>
-                <p class="text-gray mb-40 mb-sm-30"><?php print $content_slider ?></p>
-                <div><a href="<?php print $link_slider ?>" class="btn btn-mod btn-round btn-large btn-hover-anim"><span>View</span></a>
-                </div>
-              </div>
-            </div>
+                  <div class="col-md-7 mb-sm-40">
+                    <div class="work-full-media mt-0"><img src="<?php print $$image ?>"/></div>
+                  </div>
 
-            <div class="<?php print $img_classe ?>">
+                  <div class="col-md-5 col-lg-4 offset-lg-1 d-flex align-items-center">
 
-              <!-- Gallery -->
-              <div class="work-full-media mt-0">
-                <div class="clearlist work-full-slider owl-carousel">
-                  <?php for ($i = 1; $i <= 5; $i++) { ?>
-                    <?php
-                    $image = "image_{$i}";
-                    ?>
-                    <?php if ($$image) { ?>
+                    <div class="w-100">
+
+                      <h2 class="section-title-small mb-30 mb-md-20"><?php print $$title ?></h2>
+
+                      <p class="text-gray mb-40 mb-sm-30"><?php print $$content ?></p>
+
                       <div>
-                        <img class="lazyOwl" src="<?php print $$image ?>" alt="Image Description"/>
+                        <a href="<?php print $$link ?>" class="btn btn-mod btn-round btn-large btn-hover-anim"><span>View Project 1</span></a>
                       </div>
-                    <?php } ?>
-                  <?php } ?>
 
+                    </div>
+
+                  </div>
                 </div>
               </div>
-              <!-- End Gallery -->
-
-            </div>
-
-          </div>
-        </div>
-      </section>
+            </section>
+          <?php } ?>
+        <?php } ?>
+      </div>
 
 
       <?php return ob_get_clean(); ?>
