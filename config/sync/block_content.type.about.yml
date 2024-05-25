@@ -1,0 +1,8 @@
+uuid: 411884d9-af2b-4b87-ab90-e74a942d15d9
+langcode: fr
+status: true
+dependencies: {  }
+id: about
+label: About
+revision: 0
+description: ''

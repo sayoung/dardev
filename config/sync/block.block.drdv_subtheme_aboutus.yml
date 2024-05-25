@@ -1,0 +1,24 @@
+uuid: b11c7314-3c20-453e-8be8-cf401455b7fa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - dardevthemer
+    - md_manager
+  theme:
+    - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
+id: drdv_subtheme_aboutus
+theme: drdv_subtheme
+region: footer_first
+weight: 0
+provider: null
+plugin: md_manager_about_us
+settings:
+  id: md_manager_about_us
+  label: 'About us'
+  label_display: '0'
+  provider: md_manager
+visibility: {  }

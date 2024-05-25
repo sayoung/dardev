@@ -3,6 +3,7 @@
 namespace Drupal\md_manager\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Menu\MenuLinkTreeElement;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
 
@@ -22,10 +23,12 @@ final class CustomFooterMenuBlock extends BlockBase {
    */
   public function build(): array {
 
-    $menu = $this->buildMenuTreeWithChildren('main');
+    $menu['company'] = $this->buildMenuTreeWithChildren('menu-second');
+    $menu['social'] = $this->buildMenuTreeWithChildren('social-media');
+    $menu['service'] = $this->buildMenuTreeWithChildren('menu-service');
 
     $build['content'] = [
-      '#theme' => 'footer_menu',
+      '#theme' => 'footer_company_menu',
       '#menu' => $menu,
     ];
     return $build;
@@ -49,12 +52,8 @@ final class CustomFooterMenuBlock extends BlockBase {
     $parameters->onlyEnabledLinks();
     $tree = $menu_tree_service->load($menu_name, $parameters);
 
-    $tree = array_filter($tree, function ($item) {
-      return !empty($item->subtree);
-    });
     // Build the menu tree with children.
     $menu_tree = [];
-
 
 
     foreach ($tree as $item) {
@@ -63,7 +62,6 @@ final class CustomFooterMenuBlock extends BlockBase {
         $menu_tree[] = $menu_tree_item;
       }
     }
-
     return $menu_tree;
   }
 
@@ -78,10 +76,11 @@ final class CustomFooterMenuBlock extends BlockBase {
    * @return array
    *   An array representing the menu item and its children.
    */
-  protected function buildMenuWithChildren($menu_item, MenuLinkTreeInterface $menu_tree_service): array {
+  protected function buildMenuWithChildren(MenuLinkTreeElement $menu_item, MenuLinkTreeInterface $menu_tree_service): array {
     $menu_tree_item = [
-        'title' => $menu_item->link->getTitle(),
-        'url' => $menu_item->link->getUrlObject()->toString(),
+      'title' => $menu_item->link->getTitle(),
+      'url' => $menu_item->link->getUrlObject()->toString(),
+      'class' => $menu_item->link->getOptions()['attributes']['drv_class'] ?? ''
     ];
 
     if (!empty($menu_item->subtree)) {
