@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.portfolio.body
+    - field.field.node.portfolio.field_client
+    - field.field.node.portfolio.field_date
     - field.field.node.portfolio.field_portfolio_images
     - field.field.node.portfolio.field_portfolio_information
     - field.field.node.portfolio.field_portfolio_tags
     - image.style.thumbnail
     - node.type.portfolio
   module:
+    - datetime
     - image
     - imce
     - path
@@ -84,6 +87,20 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_client:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 121
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_portfolio_images:
     type: image_image
