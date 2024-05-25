@@ -3,9 +3,13 @@ langcode: fr
 status: true
 dependencies:
   module:
+    - dardevthemer
     - system
   theme:
     - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
 _core:
   default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
 id: drdv_subtheme_content
@@ -17,6 +21,6 @@ plugin: system_main_block
 settings:
   id: system_main_block
   label: 'Contenu de la page principale'
-  label_display: '0'
+  label_display: visible
   provider: system
 visibility: {  }

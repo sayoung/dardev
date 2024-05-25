@@ -16,10 +16,14 @@
   <div class="post-prev col-md-6 col-lg-4 mt-30">
     <div class="post-prev-container">
       <div class="post-prev-img">
+
+
+        {% if content.field_image['#items'] is not empty %}
         {% set image_file = content.field_image['#items'].entity.fileuri %}
         <a href="{{ url }}">
-          <img src="{{ file_url(image_file) }}" alt="{{ content.field_image['#items'].alt }}" />
+          <img src="{{ image_file|image_style('blog_650x412') }}" alt="{{ content.field_image['#items'].alt }}" />
         </a>
+        {% endif %}
       </div>
       <h4 class="post-prev-title">
         <a href="{{ url }}">{{ label }}</a>
@@ -55,31 +59,7 @@
 <!-- End Display article for teaser page -->
 {% else %}
 <!-- Start Display article for detail page -->
-  <!-- Header Section -->
-  <section class="page-section bg-gray-light-1 bg-light-alpha-90 parallax-5" style="background-image: url(themes/custom/dardev_theme/images/full-width-images/section-bg-1.jpg)" id="home">
-    <div class="container position-relative pt-30 pt-sm-50">
-      <div class="text-center">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h1 class="hs-title-1 mb-20">
-              <span class="wow charsAnimIn" data-splitting="chars">{{ label }}</span>
-            </h1>
 
-            <!-- Author, Categories, Comments -->
-            <div class="blog-item-data mt-30 mt-sm-10 mb-0 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="d-inline-block me-3">
-                <a href="#"><i class="mi-clock size-16"></i><span class="visually-hidden">Date:</span> {{ node.getCreatedTime()|date("F d") }}</a>
-              </div>
-              <div class="d-inline-block me-3">
-                <a href="#"><i class="mi-user size-16"></i><span class="visually-hidden">Author:</span> {{ author_name }}</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Header Section -->
 
 <!-- Section -->
 <section class="page-section">
