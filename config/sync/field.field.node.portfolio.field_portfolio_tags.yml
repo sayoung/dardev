@@ -25,5 +25,7 @@ settings:
       portfolio_tags: portfolio_tags
     sort:
       field: _none
+      direction: asc
     auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

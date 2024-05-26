@@ -245,6 +245,12 @@ function dardev_theme_preprocess_block(&$variables) {
     $variables['setting_logo'] = $tmp_logo['use_default'];
   }
   $route_match = \Drupal::routeMatch();
+  if (isset($variables['elements']['content']['#view'])) {
+  $view = $variables['elements']['content']['#view'];
+  dump($view->storage->id());
+  dump($view->current_display);
+  dump($route_match->getRouteName());
+  }
   if ($variables['plugin_id'] == 'system_main_block') {
     if ($route_match->getRouteName() == 'entity.node.canonical') {
       // Get the node entity from the route
@@ -252,10 +258,15 @@ function dardev_theme_preprocess_block(&$variables) {
 
       // Check if the node exists and is of the type 'nodeX'
       if ($node instanceof \Drupal\node\NodeInterface && $node->bundle() == 'portfolio') {
-        if (!$node->get('field_portfolio_information')->isEmpty()) {
-          $node_service = $node->get('field_portfolio_information')->getValue();
-          $service_values = array_column($node_service, 'value');
-          $services_list = implode(', ', $service_values);
+        if ($node->hasField('field_portfolio_tags') && !$node->get('field_portfolio_tags')->isEmpty()) {
+          $services_list = [];
+          foreach ($node->get('field_portfolio_tags')->referencedEntities() as $entity) {
+            if ($entity) {
+              $services_list[] = $entity->label();
+            }
+          }
+
+          $services_list = implode(', ', $services_list);
           $variables['services'] = $services_list;
         }
 

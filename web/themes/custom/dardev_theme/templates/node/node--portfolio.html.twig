@@ -32,24 +32,47 @@
 {% elseif view_mode == 'teaser_2' %}
   {% set body %}{{content.body}}{% endset %}
 
- <div class="portfolio-v2">
-    <div class="portfolio-content">
-      <div class="portfolio-images">
-        {{ content.field_portfolio_images }}
-        <a class="link" href="{{ url }}"><i class="fa fa-link"></i></a>
-      </div>
-      <div class="content-inner">
-        <div class="portfolio-information">
-          <div class="category">{{content.field_portfolio_tags}}</div>
-          <h2 class="title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h2>
-          <div class="portfolio-hover">
-            <div class="desc">{{ content.body }}</div>
-            <div class="action"><a class="btn-inline" href="{{ url }}">{{'Read More'|t}}</a></div>
+
+
+  {% if content.field_portfolio_images['#items'] is not empty %}
+
+    {% if content.field_portfolio_tags %}
+      {% set tags = [] %}
+      {% for item in content.field_portfolio_tags %}
+        {% if item['#options'].entity %}
+          {% set tag_name = item['#options'].entity.id() %}
+          {% if tag_name %}
+            {% set tags = tags|merge([tag_name]) %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    {% endif %}
+    {%
+      set portfolio_classes = [
+      'work-item mix',
+      tags|join(' ')
+    ]
+    %}
+    {% set image_file = content.field_portfolio_images['#items'].entity.fileuri %}
+    <li{{ attributes.addClass(portfolio_classes) }}>
+      <a href="{{ url }}" class="work-lightbox-link mfp-image">
+        <div class="work-img">
+          <div class="work-img-bg wow-p scalexIn"></div>
+          <img src="{{ image_file|image_style('portfolio_list_719x461') }}"
+               alt="{{ content.field_portfolio_images['#items'].alt }}" class="wow-p fadeIn" data-wow-delay="1s"/>
+        </div>
+        <div class="work-intro">
+          <h3 class="work-title">{{ label }}</h3>
+          <div class="work-descr">
+            {{ content.body }}
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </a>
+    </li>
+
+  {% endif %}
+
 
 {% elseif view_mode == 'teaser_3' %}
     {% set body %}{{content.body}}{% endset %}
@@ -124,14 +147,17 @@
             <b>{{ "Services"|t }}:</b>
           </div>
           <div class="col-sm-8">
-            {% if content.field_portfolio_information %}
-              {% set items = [] %}
-              {% for item in content.field_portfolio_information %}
-                {% if item['#context'].value|striptags|trim is not empty %}
-                {% set items = items|merge([item['#context'].value|striptags|trim]) %}
+            {% if content.field_portfolio_tags %}
+              {% set tags = [] %}
+              {% for item in content.field_portfolio_tags %}
+                {% if item['#options'].entity %}
+                  {% set tag_name = item['#options'].entity.label() %}
+                  {% if tag_name %}
+                    {% set tags = tags|merge([tag_name]) %}
+                  {% endif %}
                 {% endif %}
               {% endfor %}
-              {{ items|join(', ') }}
+              {{ tags|join(', ') }}
             {% endif %}
           </div>
         </div>

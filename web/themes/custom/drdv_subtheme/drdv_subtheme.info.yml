@@ -21,6 +21,7 @@ regions:
   before_content: 'Before Content'
   content_top: 'Content Top'
   content: 'Main content'
+  portfolio: 'Portfolio content'
   content_bottom: 'Content Bottom'
   sidebar_left: 'Sidebar Left'
   sidebar_right: 'Sidebar Right'
