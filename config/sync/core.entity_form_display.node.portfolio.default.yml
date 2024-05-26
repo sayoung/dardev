@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.portfolio.field_client
     - field.field.node.portfolio.field_date
     - field.field.node.portfolio.field_portfolio_images
+    - field.field.node.portfolio.field_portfolio_information
     - field.field.node.portfolio.field_portfolio_tags
     - image.style.thumbnail
     - node.type.portfolio
@@ -111,6 +112,14 @@ content:
     third_party_settings:
       imce:
         enabled: true
+  field_portfolio_information:
+    type: string_textfield
+    weight: 37
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_portfolio_tags:
     type: entity_reference_autocomplete
     weight: 33

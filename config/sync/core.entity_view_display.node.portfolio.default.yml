@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.portfolio.field_client
     - field.field.node.portfolio.field_date
     - field.field.node.portfolio.field_portfolio_images
+    - field.field.node.portfolio.field_portfolio_information
     - field.field.node.portfolio.field_portfolio_tags
     - image.style.large
     - node.type.portfolio
@@ -56,6 +57,14 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_portfolio_information:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_portfolio_tags:
     type: entity_reference_label

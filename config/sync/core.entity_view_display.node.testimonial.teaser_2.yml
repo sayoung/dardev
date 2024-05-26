@@ -1,9 +1,9 @@
-uuid: e00e4380-4dea-4c53-892a-63a3205e1686
+uuid: f8c0c031-c0bb-4def-ab9c-41bcc93e1c19
 langcode: fr
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_2
     - field.field.node.testimonial.body
     - field.field.node.testimonial.field_testimonial_avatar
     - field.field.node.testimonial.field_testimonial_image
@@ -16,19 +16,26 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: pbugzJHYojKYPpjcI5pn_mGGzvhIkjT16cETIlckjBM
-id: node.testimonial.teaser
+  default_config_hash: j0LKhbAcQ9Hhtpv3XO-Dk7DVkUGB84pQCTKsRjWNAD0
+id: node.testimonial.teaser_2
 targetEntityType: node
 bundle: testimonial
-mode: teaser
+mode: teaser_2
 content:
   body:
-    type: text_summary_or_trimmed
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_testimonial_avatar:
+    type: image_url
     label: hidden
     settings:
-      trim_length: 600
+      image_style: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 106
     region: content
   field_testimonial_image:
     type: image_url
@@ -36,7 +43,7 @@ content:
     settings:
       image_style: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 108
     region: content
   field_testimonial_job:
     type: string
@@ -44,7 +51,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 102
     region: content
   field_testimonial_name:
     type: string
@@ -52,14 +59,20 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 105
+    region: content
+  field_testimonial_video:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 100
     region: content
 hidden:
-  field_testimonial_avatar: true
-  field_testimonial_video: true
   langcode: true
