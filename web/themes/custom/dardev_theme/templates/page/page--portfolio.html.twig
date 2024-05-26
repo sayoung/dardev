@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Dardev's theme implementation to display a single Drupal page.
+ */
+#}
+{% set has_breadcrumb = '' %}
+<div class="page" id="top">
+  {% include header_skin %}
+
+  <main id="main">
+    {% if page.portfolio %}
+      {{ page.portfolio }}
+    {% endif %}
+  </main>
+  {% if page.highlighted %}
+    <div class="highlighted area">
+      <div class="container">
+        {{ page.highlighted }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.after_content %}
+    <div class="area after-content">
+      <div class="container">
+        <div class="content-inner">
+          {{ page.after_content }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+
+  {% include '@dardev_theme/page/footer.html.twig' %}
+</div>
