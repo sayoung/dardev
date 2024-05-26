@@ -87,6 +87,7 @@ final class AboutUsBlock extends BlockBase implements ContainerFactoryPluginInte
   public function build(): array
   {
     $data = $this->getBlockType(self::TYPE_ABOUT);
+    $data['logo'] = theme_get_setting('logo')['url'];
 
     return [
       '#theme' => 'about_us',

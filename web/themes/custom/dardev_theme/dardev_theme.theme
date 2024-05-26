@@ -246,10 +246,7 @@ function dardev_theme_preprocess_block(&$variables) {
   }
   $route_match = \Drupal::routeMatch();
   if (isset($variables['elements']['content']['#view'])) {
-  $view = $variables['elements']['content']['#view'];
-  dump($view->storage->id());
-  dump($view->current_display);
-  dump($route_match->getRouteName());
+
   }
   if ($variables['plugin_id'] == 'system_main_block') {
     if ($route_match->getRouteName() == 'entity.node.canonical') {
