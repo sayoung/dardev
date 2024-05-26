@@ -1,24 +1,27 @@
 
-<!-- Testimonials item -->
-<div class="testimonials-3-item">
-    <div class="testimonials-3-icon">
-        <i class="icon-quotation-mark"></i>
-    </div>
-    <blockquote class="testimonials-3-text">                                    
-        <p class="mb-0">
-         {{ fields.body.content|striptags|trim }} t-1
-        </p>                                    
-        <footer class="testimonials-3-author pt-30 clearfix">                                                    
-            <div class="testimonials-3-author-img float-start">
-                <img width="44" height="44" src="{{ fields.field_testimonial_avatar.content|striptags|trim  }}" alt="Image description is here" />
-            </div>                                        
-            <div class="overflow-hidden">
-               {{ fields.field_testimonial_name.content|striptags|trim  }}
+
+<div>
+    <blockquote class="mb-0">
+        
+        <div class="blockquote-icon" aria-hidden="true">”</div>
+        
+        <p>
+            This is template is so beautiful and has such wonderful new options. It is updated often which gives me even more quality. The support is one of the absolute best I've ever had the pleasure of interacting with. Quick, courteous, and extremely helpful!
+        </p>
+        
+        <div class="section-line mt-40"></div>
+        
+        <footer class="ts1-author mt-20 clearfix">
+            <div class="ts1-author-img float-start">
+                <img class="rounded-circle" width="44" height="44" src="{{ fields.field_testimonial_avatar.content|striptags|trim  }}" alt="Image description is here" />
+            </div>                                                    
+            <div>
+                {{ fields.field_testimonial_name.content|striptags|trim  }}
                 <div class="small">
-                  {{ fields.field_testimonial_job.content|striptags|trim  }}
+                    {{ fields.field_testimonial_job.content|striptags|trim  }}
                 </div>
-            </div>                                        
-        </footer>                                                    
+            </div>                                                    
+        </footer>
+        
     </blockquote>
 </div>
-<!-- End Testimonials item -->

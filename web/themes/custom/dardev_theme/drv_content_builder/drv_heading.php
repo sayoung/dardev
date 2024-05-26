@@ -81,6 +81,7 @@ if(!class_exists('element_drv_heading')):
                   'options'   => array(
                         'style-1'   => 'Style I - Default',
                         'style-2'   => 'Style II - Uppercase',
+                        'style-3'   => 'Style III - Big Size',
                   )
                ),
                array(
@@ -355,11 +356,12 @@ if(!class_exists('element_drv_heading')):
          $class[] = $el_class;
          $class[] = $align;
          $class[] = $style;
+         $class[] = $style_1;
          $class[] = $remove_padding;
          if($animate) $class[] = 'wow ' . $animate;
 
-         $style = '';
-         if($max_width) $style = " style=\"max-width: {$max_width};\"";
+         
+         if($max_width) $style_1 = " style=\"max-width: {$max_width};\"";
          
          $classes_title_text = '';
          $classes_title = array();
@@ -388,10 +390,18 @@ if(!class_exists('element_drv_heading')):
          ?>
 
       
-                  
-                  <?php if($title){ ?><h2 class="section-caption mb-xs-10"><?php print $sub_title; ?></h2><?php } ?>                  
-                  <?php if($title){ ?><h3 class="section-title-small mb-40"><?php print $title; ?></h3><?php } ?>
-                  <div class="section-line"></div>
+                  <div class="align-center <?php print $style; ?>">
+                  <?php if($style == "style-3") {?>
+                     <div class="row">
+                                        <div class="col-md-10 offset-md-1 text-center">                                            
+                                        <?php if($sub_title){ ?><h4 class="section-caption mb-xs-10"><?php print $sub_title; ?></h2><?php } ?> 
+                                       <?php if($title){ ?><h2 class="section-title mb-70 mb-sm-40"><?php print $title; ?></h2><?php } ?> 
+                                        </div>                                        
+                                    </div>
+                      <div class="section-line"></div>
+                      <?php } ?>
+                 
+                  </div>
 
 
 

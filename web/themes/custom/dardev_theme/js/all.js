@@ -531,21 +531,6 @@
                 });
                 
                 
-                
-                // Testimonials slider 2
-                $(".testimonials-slider-2").owlCarousel({
-                    slideSpeed: 350,
-                    singleItem: true,
-                    autoHeight: true,
-                    navigation: true,
-                    pagination: false,
-                    lazyLoad: true,
-                    addClassActive : true,
-                    navigationText: ['<span class="visually-hidden">Previous Slide</span><i class="mi-arrow-left" aria-hidden="true"></i>', '<span class="visually-hidden">Next Slide</span><i class="mi-arrow-right" aria-hidden="true"></i>'],
-                    afterInit: owl_keynav,
-                    afterAction: owl_update
-                });
-                
                 // Testimonials slider 3
                 $(".testimonials-slider-3").owlCarousel({
                     slideSpeed: 700,
@@ -1503,7 +1488,38 @@
         });
         
         
-        
+        $(".testimonials-treaser").owlCarousel({
+            slideSpeed: 350,
+            singleItem: false,
+            autoHeight: true,
+            navigation: true,
+            pagination: false,
+            lazyLoad: true,
+            addClassActive : true,
+            navigationText: ['<span class="visually-hidden">Previous Slide</span><i class="mi-arrow-left" aria-hidden="true"></i>', '<span class="visually-hidden">Next Slide</span><i class="mi-arrow-right" aria-hidden="true"></i>'],
+            afterInit: owl_keynav,
+            afterAction: owl_update,
+            responsive : {
+              0 : {
+                items: 1,
+              },
+              600 : {
+                items : 1,
+              },
+              768 : {
+                items : 2,
+              },
+              992: {
+                items : 2
+              },
+              1200: {
+                items: 3
+              },
+              1400: {
+                items: 3
+              }
+            }
+            });
         // Testimonials slider 2
         $(".testimonials-slider-2").owlCarousel({
             slideSpeed: 350,

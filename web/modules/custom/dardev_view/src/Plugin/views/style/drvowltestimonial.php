@@ -56,6 +56,18 @@ class drvowltestimonial extends StylePluginBase {
   public function buildOptionsForm(&$form, FormStateInterface $form_state) {
     parent::buildOptionsForm($form, $form_state);
 
+    $form['owl_carousel'] = array(
+      '#type' => 'select',
+      '#title' => $this->t('List of Class'),
+      '#description' => $this->t('Master class of CSS.'),
+      '#default_value' => $this->options['owl_carousel'],
+      '#options' => array(
+        'testimonials-treaser' => 'testimonials-treaser',
+        'testimonials-slider-1' => 'testimonials-slider-1',
+        'testimonials-slider-3' => 'testimonials-slider-3',
+      ),
+    );
+    
     $form['items'] = array(
       '#type' => 'select',
       '#title' => $this->t('Items'),

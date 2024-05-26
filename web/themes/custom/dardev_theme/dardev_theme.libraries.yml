@@ -15,6 +15,7 @@ global-styling:
       css/splitting.css: {}
       css/YTPlayer.css: {}
       css/demo-bold/demo-bold.css: {}
+      css/custom-css.css: {}
 
   js:
     

@@ -33,37 +33,32 @@
   {% if items %}
     {% if menu_level == 0 %}
       <ul class="clearlist local-scroll">
-      
-       
-        
-        {% else %}
-        <ul class="mn-sub" >
+    {% else %}
+      <ul class="mn-sub" style="display: none;">
     {% endif %}
     {% for item in items %}
       {% set class_mega_menu = '' %}
       {% set class_columns = '' %}
       {% if item.attributes.gva_layout == 'menu-block' and menu_level == 0 %}
-        {% set class_mega_menu = 'gva-mega-menu mega-menu-block' %} 
-      {% elseif item.attributes.gva_layout == 'menu-grid' and menu_level == 0 %}   
-        {% set class_mega_menu = 'gva-mega-menu megamenu menu-grid' %} 
+        {% set class_mega_menu = 'gva-mega-menu mega-menu-block' %}
+      {% elseif item.attributes.gva_layout == 'menu-grid' and menu_level == 0 %}
+        {% set class_mega_menu = 'gva-mega-menu megamenu menu-grid' %}
         {% set class_columns = ['menu-columns-', item.attributes.gva_layout_columns]|join('') %}
-      {% endif %}    
-      {%
-        set classes = [
-          ''
-        ]
-      %}
+      {% endif %}
+      {% set classes = [''] %}
       <li {{ item.attributes.addClass(classes)|without('gva_icon', 'gva_class', 'gva_layout_columns', 'gva_block', 'gva_layout') }}>
-        <a href="{{ item.url }}" class="mn-has-sub">
+        <a href="{{ item.url }}" {% if item.below %}class="mn-has-sub" {% endif %}>
           {{ item.title|trim }}
           {% if item.below or item.attributes.gva_layout == 'menu-block' and menu_level == 0 %}
-          <i class="mi-chevron-down"></i>
+            <i class="mi-chevron-down" aria-hidden="true"></i>
           {% endif %}
         </a>
         {% if item.attributes.gva_layout == 'menu-block' and menu_level == 0 %}
           <div class="sub-menu">{{ item.gva_block_content|raw }}</div>
-        {% endif %}  
-        {% if item.below %}{{ menus.menu_links(item.below, attributes, menu_level + 1) }}{% endif %}
+        {% endif %}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
       </li>
     {% endfor %}
     </ul>

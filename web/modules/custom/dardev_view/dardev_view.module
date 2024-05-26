@@ -78,30 +78,32 @@ function template_preprocess_views_view_drvowlteam(&$variables) {
   template_preprocess_views_view_unformatted($variables);
 }
 /**
- * Default template: views_view_drvowlteam.html.twig.
+ * Default template: views_view_drvowltestimonial.html.twig.
  */
 function template_preprocess_views_view_drvowltestimonial(&$variables) {
+  // Debugging output to ensure the function is called
+  
+
   $handler = $variables['view']->style_plugin;
 
-  $settings = dardev_view_owl_settings($handler->options);
-  
+  $settings = dardev_view_owl_testimonial_settings($handler->options);
+
   $variables['attributes']['class'][] = $settings['el_class'];
-  $variables['attributes']['class'][] = 'owl-carousel';
-  $variables['attributes']['class'][] = 'init-carousel-owl';
-  $variables['attributes']['class'][] = 'dirc-ini';
-  if($settings['el_id']){
+  $variables['attributes']['class'][] = $settings['owl_carousel']; 
+  if ($settings['el_id']) {
     $variables['attributes']['id'] = $settings['el_id'];
   }
   unset($settings['row_class']);
-  unset($settings['default_row_class']);
-  unset($settings['el_class']);
   unset($settings['el_id']);
+  unset($settings['owl_carousel']);
   foreach ($settings as $key => $value) {
     $variables['attributes']['data-' . $key] = $value;
   }
-  
+
   template_preprocess_views_view_unformatted($variables);
 }
+
+
 
 /**
  * Default template: views_view_drvportfolio.html.twig.
@@ -260,7 +262,62 @@ function dardev_view_owl_default_settings($key = NULL) {
 
   return isset($settings[$key]) ? $settings[$key] : $settings;
 }
+/**
+ * Default settings testimonial
+ */
+function dardev_view_owl_owl_carousel_default_settings($key = NULL) {
+  $settings = array(
+    'owl_carousel' => 5,
+    'items' => 5,
+    'items_lg' => 4,
+    'items_md' => 3,
+    'items_sm' => 2,
+    'items_xs' => 1,
+    'loop' => FALSE,
+    'speed' => 1000,
+    'auto_play' => FALSE,
+    'auto_play_speed' => 2000,
+    'auto_play_timeout' => 5000,
+    'auto_play_hover' => TRUE,
+    'navigation' => TRUE,
+    'rewind_nav' => FALSE,
+    'pagination' => FALSE,
+    'mouse_drag' => TRUE,
+    'touch_drag' => TRUE,
+    'el_class'  => '',
+    'el_id' => ''
+  );
 
+  return isset($settings[$key]) ? $settings[$key] : $settings;
+}
+/**
+ * Setting options testimonial
+ */
+function dardev_view_owl_testimonial_settings($options) {
+  $settings = array();
+  
+  $settings['owl_carousel']   = $options['owl_carousel'];
+  $settings['items'] = (int) $options['items'];
+  
+  $settings['items_lg'] = (int) $options['items_lg'];
+  $settings['items_md'] = (int) $options['items_md'];
+  $settings['items_sm'] = (int) $options['items_sm'];
+  $settings['items_xs'] = (int) $options['items_xs'];
+  $settings['loop'] =  $options['loop'];
+  $settings['speed'] = (int) $options['speed'];
+  $settings['auto_play'] = $options['auto_play'];
+  $settings['auto_play_speed'] = (int)$options['auto_play_speed'];
+  $settings['auto_play_timeout'] = (int)$options['auto_play_timeout'];
+  $settings['auto_play_hover'] = (int) $options['auto_play_hover'];
+  $settings['navigation'] =  $options['navigation'];
+  $settings['rewind_nav'] =  $options['rewind_nav'];
+  $settings['pagination'] =  $options['pagination'];
+  $settings['mouse_drag'] =  $options['mouse_drag'];
+  $settings['touch_drag'] =  $options['touch_drag'];
+  $settings['el_class']   = $options['el_class'];
+  $settings['el_id']      = $options['el_id'];
+  return $settings;
+}
 /**
  * Setting options
  */
