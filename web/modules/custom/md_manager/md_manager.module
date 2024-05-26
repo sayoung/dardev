@@ -61,6 +61,16 @@ function md_manager_theme($existing, $type, $theme, $path)
         'contact' => NULL
       ],
     ],
+    'about_us' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+    ],
+    'footer_company_menu' => [
+      'variables' => [
+        'menu' => NULL
+      ],
+    ],
   ];
 }
 

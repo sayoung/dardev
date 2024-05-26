@@ -30,12 +30,7 @@ regions:
   sidebar_right: 'Sidebar Right'
   after_content: 'After Content'
   highlighted: 'Highlighted'
-  before_footer: 'Before Footer'
   footer_first: 'Footer Fisrt'
-  footer_second: 'Footer Second'
-  footer_third: 'Footer Third'
-  footer_four: 'Footer Four'
-  after_footer: 'After Footer'
   copyright: 'Copyright'
   other: 'Other'
 

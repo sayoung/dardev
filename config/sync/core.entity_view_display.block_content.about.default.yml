@@ -1,0 +1,40 @@
+uuid: 97f8fab9-9bcc-4bba-a532-c5b3599f94a2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.about
+    - field.field.block_content.about.body
+    - field.field.block_content.about.field_email
+    - field.field.block_content.about.field_phone
+  module:
+    - text
+id: block_content.about.default
+targetEntityType: block_content
+bundle: about
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

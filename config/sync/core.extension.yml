@@ -47,6 +47,7 @@ module:
   magnific_popup: 0
   mailchimp: 0
   mailchimp_signup: 0
+  md_manager: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0

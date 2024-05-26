@@ -17,18 +17,11 @@
  * @ingroup themeable
  */
 #}
-{% if title %}
-  <h3>{{ title }}</h3>
-{% endif %}
-<div class="view-content-wrap">
-   {% for row in rows %}
-     {%
-       set row_classes = [
-         default_row_class ? 'item',
-       ]
-     %}
-     <div{{ row.attributes.addClass(row_classes) }}>
-       {{ row.content }}
-     </div>
-   {% endfor %}
-</div>
+
+
+    <div class="row mt-n30 mb-60 mb-sm-40">
+  {% for row in rows %}
+      {{ row.content }}
+  {% endfor %}
+    </div>
+

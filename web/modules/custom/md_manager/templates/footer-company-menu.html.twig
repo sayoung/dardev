@@ -1,0 +1,53 @@
+<div class="col-md-7 offset-md-1 offset-lg-2">
+  <div class="row mt-n30">
+
+    <!-- Footer Widget -->
+    <div class="col-sm-4 mt-30">
+      <h3 class="fw-title">{{ "Company"|t }}</h3>
+
+      <ul class="fw-menu clearlist">
+        {% for item in menu.company %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+    <!-- End Footer Widget -->
+
+    <!-- Footer Widget -->
+    <div class="col-sm-4 mt-30">
+
+      <h3 class="fw-title">{{ "Social Media"|t }}</h3>
+
+      <ul class="fw-menu clearlist">
+        {% for item in menu.social %}
+          <li>
+            <a href="{{ item.url }}" rel="noopener nofollow" target="_blank">
+              <i class="fa-{{ item.class }}"></i>
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+    <!-- End Footer Widget -->
+
+    <!-- Footer Widget -->
+    <div class="col-sm-4 mt-30">
+
+      <h3 class="fw-title">Legal & Press</h3>
+
+      <ul class="fw-menu clearlist">
+        {% for item in menu.service %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+    <!-- End Footer Widget -->
+
+  </div>
+</div>
+
+

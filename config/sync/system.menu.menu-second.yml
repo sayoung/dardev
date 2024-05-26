@@ -5,6 +5,6 @@ dependencies: {  }
 _core:
   default_config_hash: xeA0rGvrtGBavBmxow5A_0i52dPOi-TekLrc1eHcV_4
 id: menu-second
-label: 'Menu second'
+label: Company
 description: 'Menu of sidebar'
 locked: false
