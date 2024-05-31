@@ -248,7 +248,8 @@ function dardev_theme_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#view'])) {
 
   }
-  if ($variables['plugin_id'] == 'system_main_block') {
+
+  if ($variables['plugin_id'] == 'system_breadcrumb_block') {
     if ($route_match->getRouteName() == 'entity.node.canonical') {
       // Get the node entity from the route
       $node = $route_match->getParameter('node');

@@ -9,6 +9,12 @@
   {% include header_skin %}
 
   <main id="main">
+
+    {% if page.breadcrumbs %}
+      {% set has_breadcrumb = ' has-breadcrumb' %}
+        {{ page.breadcrumbs }}
+    {% endif %}
+
     {% include '@dardev_theme/page/main.html.twig' %}
   </main>
   {% if page.highlighted %}

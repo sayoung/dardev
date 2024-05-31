@@ -42,33 +42,35 @@
   ]
 %}
 
+<section class="page-section bg-gray-light-1 bg-light-alpha-90 parallax-5"
+         style="background-image: url(themes/custom/dardev_theme/images/full-width-images/section-bg-1.jpg)" id="home">
+  <div class="container position-relative pt-30 pt-sm-50">
 
+    <!-- Section Content -->
+    <div class="text-center">
+      <div class="row">
 
-<section class="page-section bg-dark-1 bg-dark-alpha-80 light-content parallax-5" style="{{ custom_style }}">
+        <!-- Page Title -->
+        <div class="col-md-8 offset-md-2">
 
-  <div class="container position-relative pt-50">
-            
-        
-      <div class="text-center">
-            <div class="row">
-                
-                <!-- Page Title -->
-                <div class="col-md-8 offset-md-2">
-                    
-                    <h2 class="section-caption-border mb-30 mb-xs-20 wow fadeInUp" data-wow-duration="1.2s">
-                      {{ breadcrumb_title }}
-                    </h2>
-                    {% block content %}
-                    {{ content }}
-                    {% endblock %}    
-                    
-                </div>
-               
-                
-            </div>                            
-       </div>
-          
-            
+          <h1 class="hs-title-1 mb-20">
+            <span class="wow charsAnimIn" data-splitting="chars">{{ breadcrumb_title }}</span>
+          </h1>
+
+          <div class="row">
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+              <p class="section-descr mb-0 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1.2s">
+                {% if services is defined %}{{ services }}{% endif %}
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- End Page Title -->
+
+      </div>
+    </div>
+    <!-- End Section Content -->
   </div>
 </section>
-    
+
