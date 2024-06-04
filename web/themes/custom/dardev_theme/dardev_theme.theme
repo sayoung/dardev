@@ -248,6 +248,8 @@ function dardev_theme_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#view'])) {
 
   }
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+
 
   if ($variables['plugin_id'] == 'system_breadcrumb_block') {
     if ($route_match->getRouteName() == 'entity.node.canonical') {
