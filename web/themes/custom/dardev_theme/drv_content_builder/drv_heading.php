@@ -359,7 +359,7 @@ if(!class_exists('element_drv_heading')):
          $class[] = $style_1;
          $class[] = $remove_padding;
          if($animate) $class[] = 'wow ' . $animate;
-
+         $style_1 = '';
          
          if($max_width) $style_1 = " style=\"max-width: {$max_width};\"";
          

@@ -1,7 +1,11 @@
    
 
+{% if 'testimonials-slider-treaser-2' in attributes.class %}
+<h2>test </h2>
+{% endif %}
+
 {% if attributes -%}
-      <div{{ attributes }} >
+      <div{{ attributes }} > 
 {% endif %}
        
       {% for row in rows %}

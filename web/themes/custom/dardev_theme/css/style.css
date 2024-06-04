@@ -3517,7 +3517,7 @@ a.logo:hover{
     text-align: left;
     background: rgb(69, 87, 159);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.025),0px 1px 1px 0px rgba(0, 0, 0, 0.01),0px 0px 50px 0px rgba(0, 0, 0, 0.07);
-    z-index: 1030;
+    z-index: 500;
     transition: all 0.2s var(--ease-default);
 }
 .main-nav.sticky{

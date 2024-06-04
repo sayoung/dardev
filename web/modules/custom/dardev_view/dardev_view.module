@@ -88,8 +88,9 @@ function template_preprocess_views_view_drvowltestimonial(&$variables) {
 
   $settings = dardev_view_owl_testimonial_settings($handler->options);
 
-  $variables['attributes']['class'][] = $settings['el_class'];
   $variables['attributes']['class'][] = $settings['owl_carousel']; 
+  $variables['attributes']['class'][] = $settings['el_class'];
+  
   if ($settings['el_id']) {
     $variables['attributes']['id'] = $settings['el_id'];
   }

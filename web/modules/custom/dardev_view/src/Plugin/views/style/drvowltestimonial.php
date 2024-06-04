@@ -64,7 +64,7 @@ class drvowltestimonial extends StylePluginBase {
       '#options' => array(
         'testimonials-treaser' => 'testimonials-treaser',
         'testimonials-slider-1' => 'testimonials-slider-1',
-        'testimonials-slider-3' => 'testimonials-slider-3',
+        'testimonials-slider-treaser-2' => 'testimonials-slider-treaser-2',
       ),
     );
     

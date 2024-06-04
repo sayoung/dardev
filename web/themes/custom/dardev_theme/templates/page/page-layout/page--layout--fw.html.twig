@@ -49,11 +49,7 @@
 			
 			<div class="clearfix"></div>
 			
-			<div id="content" class="content content-full">
-				<div class="container-full container-bg">
-					{% include '@dardev_theme/page/main-no-sidebar.html.twig' %}
-				</div>
-			</div>
+			
 
 			{% if page.highlighted %}
 				<div class="highlighted area">
@@ -62,6 +58,11 @@
 					</div>
 				</div>
 			{% endif %}
+			<div id="content" class="content content-full">
+				<div class="container-full container-bg">
+					{% include '@dardev_theme/page/main-no-sidebar.html.twig' %}
+				</div>
+			</div>
 
 			{% if page.after_content %}
 				<div class="area after-content">
