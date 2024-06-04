@@ -6,7 +6,7 @@
 #}
 {% set has_breadcrumb = '' %}
 <div class="page" id="top">
-	
+
 	   {% include header_skin %}
 	<main id="main">
 		{% if page.breadcrumbs %}
@@ -15,13 +15,13 @@
 		{% endif %}
 
 		<div role="main" class="main main-page{{ has_breadcrumb }}">
-		
+
 			<div class="clearfix"></div>
 			{% if page.slideshow_content %}
 				<div class="slideshow_content area">
 					{{ page.slideshow_content }}
 				</div>
-			{% endif %}	
+			{% endif %}
 
 			{% if page.help %}
 				<div class="help gav-help-region">
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 			{% endif %}
-			
+
 			<div class="clearfix"></div>
 			{% if page.before_content %}
 				<div class="before_content area">
@@ -41,14 +41,14 @@
 							<div class="col-xs-12">
 								{{ page.before_content }}
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
 			{% endif %}
-			
+
 			<div class="clearfix"></div>
-			
+
 			<div id="content" class="content content-full">
 				<div class="container-full container-bg">
 					{% include '@dardev_theme/page/main-no-sidebar.html.twig' %}
@@ -72,12 +72,9 @@
 	        		</div>
 				</div>
 			{% endif %}
-			
+
 		</div>
 	</main>
 	{% include '@dardev_theme/page/footer.html.twig' %}
 	</div>
 
-
-
-{% include '@dardev_theme/page/parts/quick-side.html.twig' %}
