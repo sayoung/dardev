@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_2
     - field.storage.node.body
     - field.storage.node.field_testimonial_avatar
     - field.storage.node.field_testimonial_image
@@ -351,10 +352,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: none
         options:
           offset: 0
-          items_per_page: 5
       exposed_form:
         type: basic
         options:
@@ -1625,9 +1625,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: image_url
           settings:
-            image_link: ''
             image_style: ''
           group_column: ''
           group_columns: {  }
@@ -1705,13 +1704,13 @@ display:
       style:
         type: drvowltestimonial
         options:
-          grouping: {  }
           row_class: ''
           default_row_class: false
-          owl_carousel: testimonials-slider-3
-          items: '1'
-          items_lg: '1'
-          items_md: '1'
+          uses_fields: false
+          owl_carousel: testimonials-slider-treaser-2
+          items: '2'
+          items_lg: '2'
+          items_md: '2'
           items_sm: '1'
           items_xs: '1'
           loop: 1
@@ -1720,16 +1719,18 @@ display:
           auto_play_speed: '3000'
           auto_play_timeout: '6000'
           auto_play_hover: 1
-          navigation: 0
-          rewind_nav: 0
-          pagination: 0
+          navigation: 1
+          rewind_nav: 1
+          pagination: 1
           mouse_drag: 1
           touch_drag: 1
-          el_class: treaser
+          el_class: 'slide-3 owl-loaded owl-drag'
           el_id: ''
       row:
-        type: fields
-        options: {  }
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser_2
       defaults:
         title: false
         style: false
