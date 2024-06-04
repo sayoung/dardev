@@ -353,6 +353,7 @@ if(!class_exists('element_drv_heading')):
          ), $attr));
 
          $class = array();
+         $style_1 = '';
          $class[] = $el_class;
          $class[] = $align;
          $class[] = $style;
