@@ -44,7 +44,16 @@
 
 
 {% block content %}
+{% if not is_front %}
+<section class="page-section">
+  <div class="container relative">
+{% endif %}
 
     {{ content }}
+
+    {% if not is_front %}
+  </div>
+</section>
+{% endif %}
 
 {% endblock %}
