@@ -108,7 +108,7 @@ if (!class_exists("element_drv_chiffre_cle.php")):
                 "animate_delay" => "",
                 "el_class" => "",
             ];
-            for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 4; $i++) {
                 $default["title_{$i}"] = "";
                 $default["type_{$i}"] = "";
                 $default["content_{$i}"] = "";
@@ -152,7 +152,7 @@ if (!class_exists("element_drv_chiffre_cle.php")):
 										
 										<!-- Numbers Grid -->
 										<div class="row mt-n50 mt-xs-n30">
-											<?php for($i=1; $i<=10; $i++){ ?>
+											<?php for($i=1; $i<=4; $i++){ ?>
 											<?php 
 												$title = "title_{$i}";
 												$type = "type_{$i}";

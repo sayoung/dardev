@@ -1,8 +1,13 @@
-<article class="testimonial-node-2">      
-   <div class="testimonial-content">
-      <div class="icon">“</div> 
-      <div class="quote">{{ fields.body.content|striptags|trim }}</div>  
-      <h4 class="name">{{ fields.field_testimonial_name.content }}</h4>
+<div class="owl-item">
+   <div class="card">
+       <div class="img-card">
+           <img src="{{ fields.field_testimonial_avatar.content|striptags|trim  }}"   alt=""> 
+       </div>
+       <div class="testimonial mt-4 mb-2">
+         {{ fields.body.content|striptags|trim }} t-2
+       </div>
+       <div class="name">
+         {{ fields.field_testimonial_name.content|striptags|trim  }}
+       </div>
    </div>
-</article>
-  
+</div>

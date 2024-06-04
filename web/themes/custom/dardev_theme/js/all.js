@@ -531,32 +531,15 @@
                 });
                 
                 
-                
-                // Testimonials slider 2
-                $(".testimonials-slider-2").owlCarousel({
+                // Testimonials slider 3
+                $(".testimonials-slider-3").owlCarousel({
                     slideSpeed: 350,
                     singleItem: true,
                     autoHeight: true,
                     navigation: true,
-                    pagination: false,
                     lazyLoad: true,
                     addClassActive : true,
-                    navigationText: ['<span class="visually-hidden">Previous Slide</span><i class="mi-arrow-left" aria-hidden="true"></i>', '<span class="visually-hidden">Next Slide</span><i class="mi-arrow-right" aria-hidden="true"></i>'],
-                    afterInit: owl_keynav,
-                    afterAction: owl_update
-                });
-                
-                // Testimonials slider 3
-                $(".testimonials-slider-3").owlCarousel({
-                    slideSpeed: 700,
-                    items: 3,
-                    itemsDesktop: [1199, 3],
-                    itemsDesktopSmall: [1024, 2],
-                    itemsTabletSmall: [767, 1],
-                    itemsMobile: [480, 1],
-                    navigation: true,
-                    addClassActive : true,
-                    navigationText: ['<span class="visually-hidden">Previous Slide</span><i class="mi-arrow-left" aria-hidden="true"></i>', '<span class="visually-hidden">Next Slide</span><i class="mi-arrow-right" aria-hidden="true"></i>'],
+                    navigationText: ['<span class="visually-hidden">Previous Slide</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27px" height="57px" viewBox="0 0 27 57" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5.005,28.500 L27.000,54.494 L24.000,56.994 L0.005,28.500 L24.000,0.006 L27.000,2.506 L5.005,28.500 Z"/></svg>', '<span class="visually-hidden">Next Slide</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27px" height="57px" viewBox="0 0 27 57" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.995,28.500 L-0.000,54.494 L3.000,56.994 L26.995,28.500 L3.000,0.006 L-0.000,2.506 L21.995,28.500 Z"/></svg>'],
                     afterInit: owl_keynav,
                     afterAction: owl_update
                 });
@@ -1503,7 +1486,38 @@
         });
         
         
-        
+        $(".testimonials-treaser").owlCarousel({
+            slideSpeed: 350,
+            singleItem: false,
+            autoHeight: true,
+            navigation: true,
+            pagination: false,
+            lazyLoad: true,
+            addClassActive : true,
+            navigationText: ['<span class="visually-hidden">Previous Slide</span><i class="mi-arrow-left" aria-hidden="true"></i>', '<span class="visually-hidden">Next Slide</span><i class="mi-arrow-right" aria-hidden="true"></i>'],
+            afterInit: owl_keynav,
+            afterAction: owl_update,
+            responsive : {
+              0 : {
+                items: 1,
+              },
+              600 : {
+                items : 1,
+              },
+              768 : {
+                items : 2,
+              },
+              992: {
+                items : 2
+              },
+              1200: {
+                items: 3
+              },
+              1400: {
+                items: 3
+              }
+            }
+            });
         // Testimonials slider 2
         $(".testimonials-slider-2").owlCarousel({
             slideSpeed: 350,
@@ -1519,18 +1533,26 @@
         });
         
         // Testimonials slider 3
-        $(".testimonials-slider-3").owlCarousel({
-            slideSpeed: 700,
-            items: 3,
-            itemsDesktop: [1199, 3],
-            itemsDesktopSmall: [1024, 2],
-            itemsTabletSmall: [767, 1],
-            itemsMobile: [480, 1],
+        $(".testimonials-slider-treaser-2").owlCarousel({
+            items: 1,
+            singleItem: false,
+            autoHeight: true,
             navigation: true,
+            pagination: false,
+            center: true,
             addClassActive : true,
+            lazyLoad: true,
             navigationText: ['<span class="visually-hidden">Previous Slide</span><i class="mi-arrow-left" aria-hidden="true"></i>', '<span class="visually-hidden">Next Slide</span><i class="mi-arrow-right" aria-hidden="true"></i>'],
             afterInit: owl_keynav,
-            afterAction: owl_update
+            afterAction: owl_update,
+            responsive: {
+                0: { items: 1 },
+                480: { items: 2 },
+                575: { items: 2 },
+                768: { items: 2 },
+                991: { items: 3 },
+                1200: { items: 4 }
+            }
         });
         
         // Fullwidth gallery
