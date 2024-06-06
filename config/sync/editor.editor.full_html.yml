@@ -14,9 +14,13 @@ settings:
   toolbar:
     items:
       - bold
+      - undo
       - italic
       - strikethrough
+      - specialCharacters
       - superscript
+      - underline
+      - showBlocks
       - subscript
       - removeFormat
       - '|'

@@ -272,6 +272,9 @@ function dardev_theme_preprocess_block(&$variables) {
 
       }
     }
+    if ($route_match->getRouteName() == 'contact.site_page') {
+      $variables['is_contact'] = true;
+    }
   }
 }
 
@@ -430,3 +433,22 @@ function dardev_theme_page_attachments_alter(array &$attachments) {
     'style-logo',
   ];
 }
+
+/**
+ * Implements hook_theme_suggestions_alter() for contact form container.
+ */
+function dardev_theme_theme_suggestions_container_alter(array &$suggestions, array &$variables, $hook)
+{
+  if (isset($variables['element']['#webform']) && $variables['element']['#webform'] == 'contact' && !empty($variables['element']['#type']) && ($variables['element']['#type'] == 'container')) {
+    $id = $variables['element']['#webform'];
+    // Convert the ID to a valid theme suggestion name.
+    $suggestions[] = 'container__' . strtr($id, '-', '_');
+  }
+  if (isset($variables['element']['#webform']) && $variables['element']['#webform'] == 'contact' && !empty($variables['element']['#type']) && $variables['element']['#type'] == 'webform_actions') {
+    $id = $variables['element']['#webform'];
+    // Convert the ID to a valid theme suggestion name.
+    $suggestions[] = 'container__' . strtr($id, '-', '_') . '_action';
+  }
+
+
+  }

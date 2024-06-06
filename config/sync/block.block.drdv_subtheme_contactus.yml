@@ -1,0 +1,24 @@
+uuid: 52964702-6579-4eae-8715-348cd686cd0c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - dardevthemer
+    - md_manager
+  theme:
+    - drdv_subtheme
+third_party_settings:
+  dardevthemer:
+    classes: ''
+id: drdv_subtheme_contactus
+theme: drdv_subtheme
+region: contact
+weight: 0
+provider: null
+plugin: md_manager_contact_us
+settings:
+  id: md_manager_contact_us
+  label: 'Contact us'
+  label_display: visible
+  provider: md_manager
+visibility: {  }

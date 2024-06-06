@@ -31,20 +31,18 @@
 #}
 {% set title_classes = '' %}
 {% if label == '' %}
-{% set title_classes = 'no-title' %}
+  {% set title_classes = 'no-title' %}
 {% endif %}
-{%
-  set classes = [
-    'block drv-block-breadcrumb',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-    title_classes
-  ]
-%}
+{% set classes = [
+  'block drv-block-breadcrumb',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  title_classes
+] %}
 
 <section class="page-section bg-gray-light-1 bg-light-alpha-90 parallax-5"
          style="background-image: url(themes/custom/dardev_theme/images/full-width-images/section-bg-1.jpg)" id="home">
-  <div class="container position-relative pt-30 pt-sm-50">
+  <div class="container position-relative {% if not is_contact %} pt-30 {% endif %}pt-sm-50">
 
     <!-- Section Content -->
     <div class="text-center">
@@ -53,18 +51,30 @@
         <!-- Page Title -->
         <div class="col-md-8 offset-md-2">
 
-          <h1 class="hs-title-1 mb-20">
-            <span class="wow charsAnimIn" data-splitting="chars">{{ breadcrumb_title }}</span>
+          {% if is_contact %}
+            <h2 class="section-caption-border mb-30 mb-xs-20 wow fadeInUp animated" data-wow-duration="1.2s"
+                style="visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">
+              {{ breadcrumb_title }}
+            </h2>
+          {% endif %}
+          <h1 class="hs-title-1 mb-{{ is_contact ? '0' : '20' }}">
+            <span class="wow charsAnimIn" data-splitting="chars">
+              {% if is_contact %}
+                {{ "Say hello and let’s start the productive work."|t }}
+                {% else %}
+                  {{ breadcrumb_title }}
+              {% endif %}
+            </span>
           </h1>
-
-          <div class="row">
-            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <p class="section-descr mb-0 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1.2s">
-                {% if services is defined %}{{ services }}{% endif %}
-              </p>
+          {% if services is defined %}
+            <div class="row">
+              <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <p class="section-descr mb-0 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1.2s">
+                  {{ services }}
+                </p>
+              </div>
             </div>
-          </div>
-
+          {% endif %}
         </div>
         <!-- End Page Title -->
 

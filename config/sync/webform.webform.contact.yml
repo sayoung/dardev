@@ -14,8 +14,8 @@ uid: null
 template: false
 archive: false
 id: contact
-title: Contact
-description: 'Basic email contact webform.'
+title: 'Contact Us'
+description: '<p>Basic email contact webform.</p>'
 categories: {  }
 elements: |-
   container:
@@ -25,46 +25,35 @@ elements: |-
         - row
     name:
       '#type': textfield
-      '#title': 'Your Name'
-      '#title_display': invisible
-      '#placeholder': 'Your Name'
+      '#title': Name
+      '#title_display': before
+      '#description_display': invisible
+      '#placeholder': 'Enter your Name'
       '#required': true
       '#default_value': '[current-user:display-name]'
       '#wrapper_attributes':
         class:
-          - 'col-md-6 col-sm-6 col-xs-12'
+          - col-lg-6
+      '#attributes':
+        class:
+          - input-lg
+          - round
+          - form-control
     email:
       '#type': email
-      '#title': 'Your Email'
-      '#title_display': invisible
-      '#placeholder': 'Your Email'
+      '#title': Email
+      '#title_display': before
+      '#placeholder': 'Enter your email'
       '#required': true
       '#default_value': '[current-user:mail]'
       '#wrapper_attributes':
         class:
-          - 'col-md-6 col-sm-6 col-xs-12'
-  container_01:
-    '#type': container
-    '#attributes':
-      class:
-        - row
-    phone_number:
-      '#type': tel
-      '#title': 'Phone Number'
-      '#title_display': invisible
-      '#placeholder': 'Phone Number'
-      '#wrapper_attributes':
+          - col-lg-6
+      '#attributes':
         class:
-          - 'col-md-6 col-sm-6 col-xs-12'
-    subject:
-      '#type': textfield
-      '#title': Subject
-      '#title_display': invisible
-      '#placeholder': Subject
-      '#wrapper_attributes':
-        class:
-          - 'col-md-6 col-sm-6 col-xs-12'
-      '#test': 'Testing contact webform from [site:name]'
+          - input-lg
+          - round
+          - form-control
   container_02:
     '#type': container
     '#attributes':
@@ -78,7 +67,12 @@ elements: |-
       '#placeholder': 'Message '
       '#wrapper_attributes':
         class:
-          - 'col-md-12 col-sm-12 col-xs-12'
+          - form-group
+      '#attributes':
+        class:
+          - input-lg
+          - round
+          - form-control
       '#test': 'Please ignore this email.'
   container_03:
     '#type': container
@@ -90,8 +84,27 @@ elements: |-
       '#title': 'Submit button(s)'
       '#attributes':
         class:
-          - 'col-md-12 col-sm-12 col-xs-12'
+          - submit_btn
+          - btn
+          - btn-mod
+          - btn-large
+          - btn-round
+          - btn-hover-anim
       '#submit__label': 'Send message'
+      '#submit__attributes':
+        class:
+          - submit_btn
+          - btn
+          - btn-mod
+          - btn-large
+          - btn-round
+          - btn-hover-anim
+    markup:
+      '#type': webform_markup
+      '#wrapper_attributes':
+        class:
+          - col-lg-7
+      '#markup': '<div class="form-tip pt-20 pt-sm-0 mt-sm-20">All the fields are required. By sending the form you agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>.</div>'
 css: ''
 javascript: ''
 settings:
@@ -104,7 +117,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -133,6 +146,13 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes:
+    class:
+      - form
+      - contact-form
+      - pe-lg-5
+  form_method: ''
+  form_action: ''
   share: false
   share_node: false
   share_theme_name: ''
@@ -169,12 +189,15 @@ settings:
   wizard_confirmation_label: ''
   wizard_auto_forward: true
   wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -220,6 +243,8 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:

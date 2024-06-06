@@ -34,7 +34,13 @@ class ContactConfigForm extends ConfigFormBase
         $form[$langcode] = [
           '#type' => 'details',
           '#title' => $this->t('Settings for @lang', ['@lang' => $language->getName()]),
-          '#open' => FALSE, // Fieldset starts open.
+          '#open' => TRUE, // Fieldset starts open.
+        ];
+
+        $form[$langcode]['description_'.$langcode] = [
+          '#type' => 'textarea',
+          '#title' => $this->t('Description for @lang', ['@lang' => $language->getName()]),
+          '#default_value' => $config->get($langcode . '.description'),
         ];
 
         $form[$langcode]['address_'.$langcode] = [
@@ -76,7 +82,9 @@ class ContactConfigForm extends ConfigFormBase
     foreach ($languages as $language) {
       $langcode = $language->getId();
 
-      $config->set($langcode . '.address', $form_state->getValue('address_'.$langcode))
+      $config
+        ->set($langcode . '.description', $form_state->getValue('description_'.$langcode))
+        ->set($langcode . '.address', $form_state->getValue('address_'.$langcode))
         ->set($langcode . '.phone', $form_state->getValue('phone_'.$langcode))
         ->set($langcode . '.fax', $form_state->getValue('fax_'.$langcode))
         ->set($langcode . '.email', $form_state->getValue('email_'.$langcode));
