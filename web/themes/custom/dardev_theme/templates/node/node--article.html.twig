@@ -41,17 +41,15 @@
   </div>
 
 {% elseif view_mode == 'teaser_2' %}
-  <div class="post-block teaser-2">
-    <div class="post-image">
-      {{ content.field_image }}
-    </div>
-    <div class="post-content text-center">
-        <div class="post-meta">
-          <span class="post-created"><i class="far fa-clock"></i> {{ node.getCreatedTime()|date("d M") }} </span>
-          <span class="author"><i class="far fa-user-circle"></i>{{ author_name }}</span>
-          <span class="post-comment"><i class="fas fa-comments"></i> {{ comment_count }}{{' Comments'|t}}</span>
-        </div>
-        <h3 class="post-title"> <a href="{{ url }}" rel="bookmark">{{ label }}</a> </h3>
+  <div class="col-sm-4 blog-list">
+    {% set image_file = content.field_image['#items'].entity.fileuri %}
+    <img src="{{ image_file|image_style('blog_650x412') }}" alt="{{ content.field_image['#items'].alt }}" class="img-responsive">
+    <div class="blog-list-content">
+      <div class="title rainbow">
+        <a href="{{ url }}">
+          {{ node.body.summary|striptags|slice(0, 35) ~ '...' }}
+        </a></div>
+      <div class="blog-footer"> <b> {{ label }}</b>  <span> {{ node.getCreatedTime()|date("F d") }}</span></div>
     </div>
   </div>
 

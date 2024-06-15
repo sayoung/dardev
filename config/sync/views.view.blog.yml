@@ -3,7 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.teaser_2
     - field.storage.node.field_image
     - node.type.article
   module:
@@ -225,7 +225,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: teaser_2
       query:
         type: views_query
         options:
